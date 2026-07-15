@@ -34,7 +34,8 @@
 
 .navbar--transparent .navbar__logo-text,
 .navbar--transparent .nav-link,
-.navbar--transparent .navbar__icon-btn {
+.navbar--transparent .navbar__icon-btn,
+.navbar--transparent .navbar__hamburger {
   color: var(--text-light);
 }
 
@@ -50,7 +51,8 @@
 
 .navbar--scrolled .navbar__logo-text,
 .navbar--scrolled .nav-link,
-.navbar--scrolled .navbar__icon-btn {
+.navbar--scrolled .navbar__icon-btn,
+.navbar--scrolled .navbar__hamburger {
   color: var(--charcoal);
 }
 
@@ -63,7 +65,8 @@
 
 .navbar--opaque .navbar__logo-text,
 .navbar--opaque .nav-link,
-.navbar--opaque .navbar__icon-btn {
+.navbar--opaque .navbar__icon-btn,
+.navbar--opaque .navbar__hamburger {
   color: var(--charcoal);
 }
 
@@ -363,6 +366,14 @@
 .mobile-nav-links a:hover {
   color: var(--bronze);
   padding-left: var(--space-4);
+}
+
+.mobile-nav-links a.active {
+  color: var(--bronze);
+  font-weight: 700;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--bronze);
+  background: rgba(176,141,87,0.08);
 }
 
 .mobile-menu-footer {

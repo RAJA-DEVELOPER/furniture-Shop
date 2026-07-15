@@ -59,7 +59,11 @@ const initNavbar = () => {
 
   /* ── Active link highlighting ── */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  navbar.querySelectorAll('.nav-link, .mobile-nav-links a').forEach((link) => {
+  const allNavLinks = [
+    ...navbar.querySelectorAll('.nav-link'),
+    ...document.querySelectorAll('.mobile-nav-links a'),
+  ];
+  allNavLinks.forEach((link) => {
     const href = link.getAttribute('href')?.split('/').pop() || '';
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
