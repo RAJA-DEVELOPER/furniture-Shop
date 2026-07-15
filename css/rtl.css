@@ -7,21 +7,21 @@
   text-align: start;
 }
 
-/* ── Navbar ── */
-[dir="rtl"] .navbar__menu {
-  margin-right: auto;
-  margin-left: 0;
+[dir="rtl"] .navbar {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+[dir="rtl"] .navbar__inner {
+  justify-content: space-between;
 }
 
 [dir="rtl"] .navbar__icons {
   margin-left: 0;
-  margin-right: var(--space-4);
 }
 
-[dir="rtl"] .navbar__logo {
-  margin-left: var(--space-8);
-  margin-right: 0;
-}
+/* ── Navbar ── */
 
 /* ── Mobile menu ── */
 [dir="rtl"] .navbar__mobile-menu {

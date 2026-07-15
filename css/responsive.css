@@ -682,10 +682,10 @@
     gap: 2px;
   }
   .navbar__logo-text {
-    display: none;
+    font-size: var(--fs-sm);
   }
   .navbar__logo {
-    gap: 0;
+    gap: var(--space-2);
   }
   .navbar__logo-mark {
     width: 32px;
@@ -798,6 +798,9 @@ table {
   }
   .rtl-toggle {
     font-size: 9px;
+  }
+  .navbar__logo {
+    gap: var(--space-1);
   }
   .navbar__logo-mark {
     width: 28px;
