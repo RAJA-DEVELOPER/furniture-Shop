@@ -2,202 +2,197 @@
    RTL STYLES — Right-to-Left Language Support
    ============================================================ */
 
-[dir="rtl"] {
+html.rtl {
   direction: rtl;
   text-align: start;
   background-color: var(--bg-body);
 }
 
-/* Move overflow handling from html to body in RTL to avoid Chrome scroll position bug */
-html[dir="rtl"] {
-  overflow-x: visible;
-}
-
-[dir="rtl"] body {
+html.rtl body {
   width: 100%;
   min-width: 100vw;
   overflow-x: hidden;
 }
 
 /* ── Navbar ── */
-[dir="rtl"] .navbar {
+html.rtl .navbar {
   left: 0;
   right: 0;
 }
-[dir="rtl"] .navbar__inner {
+html.rtl .navbar__inner {
   overflow: hidden;
 }
 
 /* ── Mobile menu ── */
-[dir="rtl"] .navbar__mobile-menu {
+html.rtl .navbar__mobile-menu {
   right: auto;
   left: 0;
   transform: translateX(100%);
 }
 
-[dir="rtl"] .navbar__mobile-menu.open {
+html.rtl .navbar__mobile-menu.open {
   transform: translateX(0);
 }
 
-[dir="rtl"] .mobile-menu-close {
+html.rtl .mobile-menu-close {
   right: auto;
   left: var(--space-4);
 }
 
 /* ── Footer ── */
-[dir="rtl"] .footer__social {
+html.rtl .footer__social {
   justify-content: flex-start;
 }
 
-[dir="rtl"] .footer__legal {
+html.rtl .footer__legal {
   gap: var(--space-4);
 }
 
 /* ── Forms ── */
-[dir="rtl"] .form-label {
+html.rtl .form-label {
   text-align: start;
 }
 
-[dir="rtl"] .input-icon-right .form-control {
+html.rtl .input-icon-right .form-control {
   padding-right: var(--space-4);
   padding-left: 44px;
 }
 
-[dir="rtl"] .pass-toggle {
+html.rtl .pass-toggle {
   right: auto;
   left: 12px;
 }
 
 /* ── Auth pages ── */
-[dir="rtl"] .auth-back svg {
+html.rtl .auth-back svg {
   transform: scaleX(-1);
 }
 
-[dir="rtl"] .auth-visual__content {
+html.rtl .auth-visual__content {
   text-align: start;
 }
 
-[dir="rtl"] .auth-visual__badges {
+html.rtl .auth-visual__badges {
   left: auto;
   right: var(--space-12);
 }
 
-[dir="rtl"] .auth-visual__logo {
+html.rtl .auth-visual__logo {
   align-self: flex-end;
 }
 
 /* ── Buttons with icons ── */
-[dir="rtl"] .btn svg:first-child:not(:only-child) {
+html.rtl .btn svg:first-child:not(:only-child) {
   margin-right: 0;
   margin-left: var(--space-2);
 }
 
-[dir="rtl"] .btn svg:last-child:not(:only-child) {
+html.rtl .btn svg:last-child:not(:only-child) {
   margin-left: 0;
   margin-right: var(--space-2);
 }
 
 /* ── Arrow icons ── */
-[dir="rtl"] .btn--ghost svg,
-[dir="rtl"] .btn--primary svg,
-[dir="rtl"] .btn--bronze svg,
-[dir="rtl"] .btn--secondary svg {
+html.rtl .btn--ghost svg,
+html.rtl .btn--primary svg,
+html.rtl .btn--bronze svg,
+html.rtl .btn--secondary svg {
   transform: scaleX(-1);
 }
 
 /* ── Hero ── */
-[dir="rtl"] .page-hero__content {
+html.rtl .page-hero__content {
   text-align: start;
 }
 
-[dir="rtl"] .page-hero__label--center {
+html.rtl .page-hero__label--center {
   text-align: center;
 }
 
 /* ── Sections ── */
-[dir="rtl"] .section-header--center {
+html.rtl .section-header--center {
   text-align: center;
 }
 
-[dir="rtl"] .section-header {
+html.rtl .section-header {
   text-align: start;
 }
 
 /* ── Cards ── */
-[dir="rtl"] .service-card {
+html.rtl .service-card {
   text-align: start;
 }
 
-[dir="rtl"] .team-card {
+html.rtl .team-card {
   text-align: start;
 }
 
-[dir="rtl"] .room-card__label {
+html.rtl .room-card__label {
   left: auto;
   right: var(--space-5);
 }
 
-[dir="rtl"] .project-card__info {
+html.rtl .project-card__info {
   text-align: start;
 }
 
 /* ── Benefits / features ── */
-[dir="rtl"] .signup-benefit {
+html.rtl .signup-benefit {
   text-align: start;
 }
 
-[dir="rtl"] .signup-benefit__icon {
+html.rtl .signup-benefit__icon {
   margin-left: var(--space-4);
   margin-right: 0;
 }
 
 /* ── Newsletter ── */
-[dir="rtl"] .newsletter-form input {
+html.rtl .newsletter-form input {
   padding-right: var(--space-5);
   padding-left: 56px;
 }
 
-[dir="rtl"] .newsletter-form button {
+html.rtl .newsletter-form button {
   right: auto;
   left: 6px;
 }
 
 /* ── Process steps ── */
-[dir="rtl"] .process-step {
+html.rtl .process-step {
   text-align: center;
 }
 
 /* ── Legal content ── */
-[dir="rtl"] .legal-content {
+html.rtl .legal-content {
   text-align: start;
 }
 
 /* ── Toast ── */
-[dir="rtl"] .toast-container {
+html.rtl .toast-container {
   right: auto;
   left: var(--space-4);
 }
 
 /* ── Back to top ── */
-[dir="rtl"] #back-to-top svg {
+html.rtl #back-to-top svg {
   transform: scaleX(-1);
 }
 
 /* ── Sitemap ── */
-[dir="rtl"] .sitemap-group__links a:hover {
+html.rtl .sitemap-group__links a:hover {
   transform: translateX(-4px);
 }
 
-[dir="rtl"] .sitemap-group__links a svg {
+html.rtl .sitemap-group__links a svg {
   margin-left: var(--space-2);
   margin-right: 0;
 }
 
 /* ── Gallery filter ── */
-[dir="rtl"] .gallery-filter {
+html.rtl .gallery-filter {
   justify-content: flex-start;
 }
 
-[dir="rtl"] .gallery-item__overlay {
+html.rtl .gallery-item__overlay {
   text-align: start;
 }
