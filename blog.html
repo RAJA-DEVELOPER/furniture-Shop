@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Home Blog — Interior design inspiration, decorating tips, furniture guides, and style stories from our design team." />
+  <meta name="keywords" content="interior design blog, home decor tips, furniture guide, design inspiration, luxury home" />
+  <meta property="og:title" content="Lumière Home — Design Journal & Blog" />
+  <meta property="og:description" content="Explore interior design stories, furniture guides, and style inspiration curated by our team." />
+  <title>Blog — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/pages/blog.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════ -->
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar__logo" aria-label="Lumière Home">
+        <div class="navbar__logo-mark">L</div>
+        <span class="navbar__logo-text">Lumière <span>Home</span></span>
+      </a>
+
+      <ul class="navbar__menu" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar__icons">
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+
+<nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;">
+    <div class="navbar__logo-mark">L</div>
+    <span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <p>Visit our showroom Mon–Sat 10am–7pm</p>
+    <a href="contact.html" class="btn btn--primary btn--sm">Book a Visit</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ══════════════════════════════════════════
+   SECTION 1: BLOG HERO
+══════════════════════════════════════════ -->
+<section class="page-hero blog-hero" aria-labelledby="blog-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/hero-living-room.png" alt="" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <div class="page-hero__label page-hero__label--center">Design Journal</div>
+      <h1 class="page-hero__title" id="blog-hero-title">Stories of <em>Style & Space</em></h1>
+      <p class="page-hero__subtitle">Interior design inspiration, furniture guides, studio updates, and expert advice from the Lumière team.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 2: FEATURED ARTICLES
+══════════════════════════════════════════ -->
+<section class="section" id="featured" aria-labelledby="featured-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Editor's Pick</div>
+      <h2 class="section-title" id="featured-title">Featured <em>Articles</em></h2>
+      <p class="section-subtitle">Handpicked stories and insights from our interior design team — crafted to inspire your next project.</p>
+    </div>
+
+    <div class="featured-articles">
+      <article class="featured-card featured-card--lg reveal-left" data-lightbox data-caption="The Art of Layering Textures">
+        <div class="featured-card__img zoom-container">
+          <img src="images/hero-living-room.png" alt="The Art of Layering Textures" class="img-real" />
+        </div>
+        <div class="overlay overlay--bottom"></div>
+        <div class="featured-card__body">
+          <div class="featured-card__meta">
+            <span class="featured-card__tag">Design Tips</span>
+            <span class="featured-card__date">Jun 12, 2026</span>
+          </div>
+          <h3 class="featured-card__title">The Art of Layering Textures in Modern Interiors</h3>
+          <p class="featured-card__excerpt">Discover how combining wood, linen, metal, and velvet transforms a flat room into a rich, inviting space that feels curated over time.</p>
+          <div class="featured-card__author">
+            <div class="featured-card__avatar">E</div>
+            <div>
+              <div class="featured-card__name">Elena Voss</div>
+              <div class="featured-card__role">Lead Interior Designer</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="featured-sidebar reveal-right">
+        <article class="featured-card featured-card--sm" data-lightbox data-caption="Choosing the Perfect Sofa">
+          <div class="featured-card__img zoom-container" style="height: 200px;">
+            <img src="images/product-sofa.png" alt="Choosing the Perfect Sofa" class="img-real" style="height: 200px; object-fit: cover;" />
+          </div>
+          <div class="overlay overlay--bottom"></div>
+          <div class="featured-card__body">
+            <div class="featured-card__meta">
+              <span class="featured-card__tag">Buying Guide</span>
+              <span class="featured-card__date">Jun 5, 2026</span>
+            </div>
+            <h3 class="featured-card__title">How to Choose the Perfect Sofa for Your Space</h3>
+            <p class="featured-card__excerpt">Size, fabric, frame, fill — everything you need to know before investing in the centrepiece of your living room.</p>
+          </div>
+        </article>
+
+        <article class="featured-card featured-card--sm" data-lightbox data-caption="Biophilic Design Trends">
+          <div class="featured-card__img zoom-container" style="height: 200px;">
+            <img src="images/dining-room.png" alt="Biophilic Design Trends" class="img-real" style="height: 200px; object-fit: cover;" />
+          </div>
+          <div class="overlay overlay--bottom"></div>
+          <div class="featured-card__body">
+            <div class="featured-card__meta">
+              <span class="featured-card__tag">Trends</span>
+              <span class="featured-card__date">May 28, 2026</span>
+            </div>
+            <h3 class="featured-card__title">Biophilic Design: Bringing the Outdoors In</h3>
+            <p class="featured-card__excerpt">Natural materials, organic shapes, and indoor greenery are reshaping how we think about the modern home.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 3: CATEGORIES
+══════════════════════════════════════════ -->
+<section class="section categories-section" id="categories" aria-labelledby="categories-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Browse Topics</div>
+      <h2 class="section-title" id="categories-title">Explore by <em>Category</em></h2>
+    </div>
+
+    <div class="categories-grid stagger-children">
+      <a href="#" class="category-card" style="--cat-accent: var(--walnut);">
+        <div class="category-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v17"/><path d="M5 12c0-3 3-6 7-6s7 3 7 6"/><path d="M5 12s-3-2-1-5c2-3 5 0 5 0"/><path d="M19 12s3-2 1-5c-2-3-5 0-5 0"/><circle cx="12" cy="8" r="2" fill="currentColor"/></svg>
+        </div>
+        <h3 class="category-card__name">Design Tips</h3>
+        <p class="category-card__count">24 articles</p>
+      </a>
+      <a href="#" class="category-card" style="--cat-accent: var(--bronze);">
+        <div class="category-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="7"/><path d="M15 15l6 6"/></svg>
+        </div>
+        <h3 class="category-card__name">Buying Guides</h3>
+        <p class="category-card__count">18 articles</p>
+      </a>
+      <a href="#" class="category-card" style="--cat-accent: var(--olive);">
+        <div class="category-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/><path d="M12 8l4 4-4 4"/></svg>
+        </div>
+        <h3 class="category-card__name">Trends & Inspiration</h3>
+        <p class="category-card__count">31 articles</p>
+      </a>
+      <a href="#" class="category-card" style="--cat-accent: var(--charcoal-mid);">
+        <div class="category-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3 class="category-card__name">Studio Stories</h3>
+        <p class="category-card__count">12 articles</p>
+      </a>
+      <a href="#" class="category-card" style="--cat-accent: var(--walnut-light);">
+        <div class="category-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10L4 20"/><path d="M15 9l4-4a1 1 0 0 1 1.4 0l.6.6a1 1 0 0 1 0 1.4l-4 4"/><path d="M10 14l-2 2"/></svg>
+        </div>
+        <h3 class="category-card__name">Craftsmanship</h3>
+        <p class="category-card__count">9 articles</p>
+      </a>
+      <a href="#" class="category-card" style="--cat-accent: var(--bronze-light);">
+        <div class="category-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C13 5 14 7 16 8c-2 1-3 3-4 6-1-3-2-5-4-6 2-1 3-3 4-6"/><line x1="18" y1="14" x2="18" y2="20"/><line x1="15" y1="17" x2="21" y2="17"/></svg>
+        </div>
+        <h3 class="category-card__name">Sustainability</h3>
+        <p class="category-card__count">7 articles</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 4: LATEST POSTS
+══════════════════════════════════════════ -->
+<section class="section latest-section" id="latest" aria-labelledby="latest-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Recent Stories</div>
+      <h2 class="section-title" id="latest-title">Latest <em>Posts</em></h2>
+    </div>
+
+    <div class="latest-grid">
+      <article class="blog-card reveal delay-1">
+        <div class="blog-card__img zoom-container">
+          <img src="images/bedroom-interior.png" alt="Bedroom Colour Palette Guide" class="img-real" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Design Tips</span>
+            <span class="blog-card__date">Jun 18, 2026</span>
+          </div>
+          <h3 class="blog-card__title">5 Bedroom Colour Palettes for a Restful Retreat</h3>
+          <p class="blog-card__excerpt">From serene neutrals to moody darks, find the palette that turns your bedroom into a sanctuary of calm.</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__read">12 min read</span>
+            <span class="blog-card__arrow">Read More →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal delay-2">
+        <div class="blog-card__img zoom-container">
+          <img src="images/dining-room.png" alt="Dining Table Guide" class="img-real" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Buying Guide</span>
+            <span class="blog-card__date">Jun 14, 2026</span>
+          </div>
+          <h3 class="blog-card__title">The Complete Guide to Choosing a Dining Table</h3>
+          <p class="blog-card__excerpt">Shape, size, material, and extension mechanisms — everything to consider for the heart of your home.</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__read">15 min read</span>
+            <span class="blog-card__arrow">Read More →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal delay-3">
+        <div class="blog-card__img zoom-container">
+          <img src="images/home-office.png" alt="Home Office Design" class="img-real" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Trends</span>
+            <span class="blog-card__date">Jun 10, 2026</span>
+          </div>
+          <h3 class="blog-card__title">Designing a Home Office That Boosts Creativity</h3>
+          <p class="blog-card__excerpt">Ergonomics meet aesthetics — how to create a workspace that is both productive and beautiful.</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__read">10 min read</span>
+            <span class="blog-card__arrow">Read More →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal delay-4">
+        <div class="blog-card__img zoom-container">
+          <img src="images/hero-living-room.png" alt="Open Plan Living" class="img-real" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Design Tips</span>
+            <span class="blog-card__date">Jun 2, 2026</span>
+          </div>
+          <h3 class="blog-card__title">Zoning an Open-Plan Space Without Walls</h3>
+          <p class="blog-card__excerpt">Rugs, lighting, furniture placement — smart strategies to define areas while keeping an airy flow.</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__read">8 min read</span>
+            <span class="blog-card__arrow">Read More →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal delay-5">
+        <div class="blog-card__img zoom-container">
+          <img src="images/product-sofa.png" alt="Velvet Care Guide" class="img-real" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Craftsmanship</span>
+            <span class="blog-card__date">May 25, 2026</span>
+          </div>
+          <h3 class="blog-card__title">Caring for Velvet Upholstery: A Complete Guide</h3>
+          <p class="blog-card__excerpt">Keep your velvet furniture looking sumptuous for years with these cleaning and maintenance tips.</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__read">6 min read</span>
+            <span class="blog-card__arrow">Read More →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal delay-6">
+        <div class="blog-card__img zoom-container">
+          <img src="images/bedroom-interior.png" alt="Sustainable Furniture" class="img-real" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Sustainability</span>
+            <span class="blog-card__date">May 20, 2026</span>
+          </div>
+          <h3 class="blog-card__title">What Makes Furniture Sustainable? A Deep Dive</h3>
+          <p class="blog-card__excerpt">FSC certification, low-VOC finishes, ethical sourcing — learn what to look for in eco-conscious furniture.</p>
+          <div class="blog-card__footer">
+            <span class="blog-card__read">14 min read</span>
+            <span class="blog-card__arrow">Read More →</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center" style="margin-top: var(--space-10);">
+      <a href="#" class="btn btn--primary btn--lg">Load More Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 5: DESIGN TIPS (Tips cards)
+══════════════════════════════════════════ -->
+<section class="section tips-section" id="tips" aria-labelledby="tips-title">
+  <div class="container">
+    <div class="tips-layout">
+      <div class="tips-content reveal-left">
+        <div class="section-label">Pro Advice</div>
+        <h2 class="section-title" id="tips-title">Quick <em>Design Tips</em></h2>
+        <p class="section-subtitle">Bite-sized insights from our design team to elevate your space — no consultation required.</p>
+
+        <div class="tips-list">
+          <div class="tip-item">
+            <div class="tip-item__num">01</div>
+            <div>
+              <div class="tip-item__title">Start with a Focal Point</div>
+              <div class="tip-item__desc">Every room needs one hero piece — a bold sofa, a statement light, or an oversized art piece. Build your palette around it.</div>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-item__num">02</div>
+            <div>
+              <div class="tip-item__title">Layer Your Lighting</div>
+              <div class="tip-item__desc">Combine ambient, task, and accent lighting at three different heights to create depth and warmth in any room.</div>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-item__num">03</div>
+            <div>
+              <div class="tip-item__title">Mix High & Low Textures</div>
+              <div class="tip-item__desc">Pair smooth surfaces (glass, marble) with tactile ones (linen, wool, rattan) for a space that feels curated, not flat.</div>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-item__num">04</div>
+            <div>
+              <div class="tip-item__title">Scale Matters</div>
+              <div class="tip-item__desc">Oversized art in a small room creates drama; petite furniture in a large room feels lost. Measure twice, buy once.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips-visual reveal-right">
+        <div class="tips-visual__grid">
+          <div class="tips-visual__item tips-visual__item--1 zoom-container" data-lightbox data-caption="Living Room Design">
+            <img src="images/hero-living-room.png" alt="Design Tip" class="img-real" />
+          </div>
+          <div class="tips-visual__item tips-visual__item--2 zoom-container" data-lightbox data-caption="Lighting Design">
+            <img src="images/dining-room.png" alt="Lighting Tip" class="img-real" />
+          </div>
+          <div class="tips-visual__item tips-visual__item--3 zoom-container" data-lightbox data-caption="Texture Mix">
+            <img src="images/product-sofa.png" alt="Texture" class="img-real" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 6: NEWSLETTER CTA
+══════════════════════════════════════════ -->
+<section class="section blog-cta" id="newsletter" aria-labelledby="newsletter-title">
+  <div class="blog-cta__bg"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="blog-cta__content reveal">
+      <div class="section-label section-label--center" style="color: var(--bronze-light); justify-content: center;">Stay Inspired</div>
+      <h2 class="blog-cta__title" id="newsletter-title">Get Weekly Design <em>Inspiration</em></h2>
+      <p class="blog-cta__subtitle">Join 25,000+ subscribers. One email per week — no spam, just carefully curated design stories, new collection previews, and exclusive offers.</p>
+      <form class="blog-cta__form" novalidate>
+        <div class="blog-cta__input-wrap">
+          <input type="email" placeholder="Enter your email address" aria-label="Email for newsletter" required />
+          <button type="submit" class="btn btn--bronze">Subscribe</button>
+        </div>
+        <p class="blog-cta__disclaimer">By subscribing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-mark">L</div>
+          <div class="footer__logo-name">Lumière <span>Home</span></div>
+        </div>
+        <p>Where timeless craftsmanship meets modern luxury. Creating beautiful spaces for discerning homes since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.65 1.97-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.08.54 1.96 1.6 1.96 1.92 0 3.4-2.02 3.4-4.94 0-2.58-1.86-4.39-4.51-4.39-3.07 0-4.87 2.3-4.87 4.68 0 .93.36 1.92.8 2.46a.32.32 0 0 1 .07.31c-.08.34-.27 1.08-.3 1.23-.05.2-.16.24-.38.15-1.42-.66-2.3-2.74-2.3-4.41 0-3.59 2.61-6.89 7.53-6.89 3.96 0 7.03 2.82 7.03 6.59 0 3.93-2.48 7.09-5.92 7.09-1.16 0-2.25-.6-2.62-1.31l-.71 2.65c-.26.98-.95 2.21-1.42 2.96.5.15 1.03.23 1.57.23 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Houzz">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L3 9v12h6V15h6v6h6V9L15 3z"/><path d="M9 9h6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h5>Collections</h5>
+        <ul class="footer__links">
+          <li><a href="gallery.html#living">Living Room</a></li>
+          <li><a href="gallery.html#bedroom">Bedroom</a></li>
+          <li><a href="gallery.html#dining">Dining Room</a></li>
+          <li><a href="gallery.html#kitchen">Kitchen</a></li>
+          <li><a href="gallery.html#office">Office</a></li>
+          <li><a href="gallery.html#outdoor">Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Stay Inspired</h5>
+        <div class="footer__newsletter">
+          <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5); margin-bottom: var(--space-3);">
+            Join 25,000+ design lovers for monthly inspiration.
+          </p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+        <div style="margin-top: var(--space-6);">
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="currentColor"/></svg> 14 Kensington High St, London</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +44 20 7946 0000</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> hello@lumierehome.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-container" aria-live="polite"></div>
+
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>
