@@ -27,7 +27,7 @@ html.rtl .navbar__inner {
 html.rtl .navbar__mobile-menu {
   right: auto;
   left: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 
 html.rtl .navbar__mobile-menu.open {
