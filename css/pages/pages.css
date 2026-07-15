@@ -502,10 +502,10 @@
   left: 0;
   right: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: var(--space-2);
   padding: var(--space-4);
-  background: linear-gradient(to top, rgba(44,44,44,0.85), transparent);
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--transition-base);
