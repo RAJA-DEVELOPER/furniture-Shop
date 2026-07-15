@@ -69,14 +69,14 @@ const initNavbar = () => {
 
 /* ── RTL Toggle ── */
 const initRTL = () => {
-  const html = document.documentElement;
+  const target = document.body;
   const saved = localStorage.getItem('lumiere-dir');
-  if (saved === 'rtl') html.setAttribute('dir', 'rtl');
+  if (saved === 'rtl') target.setAttribute('dir', 'rtl');
 
   document.querySelectorAll('.rtl-toggle').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const next = html.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
-      html.setAttribute('dir', next);
+      const next = target.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
+      target.setAttribute('dir', next);
       localStorage.setItem('lumiere-dir', next);
       btn.classList.toggle('active', next === 'rtl');
     });
