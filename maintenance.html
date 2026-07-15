@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Home is currently undergoing scheduled maintenance. We'll be back shortly — better than ever." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>We'll Be Back Soon — Lumière Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* ── Animated gradient background ── */
+    .maint-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(
+        135deg,
+        #2C2C2C 0%,
+        #3E2B22 25%,
+        #5C4033 50%,
+        #8A6B38 75%,
+        #B08D57 100%
+      );
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ── Mesh overlay ── */
+    .maint-mesh {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(176,141,87,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(92,64,51,0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(176,141,87,0.08) 0%, transparent 70%);
+    }
+
+    /* ── Floating orbs ── */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.15;
+      animation: float var(--dur) ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .orb--1 {
+      width: 400px; height: 400px;
+      background: var(--bronze);
+      top: -100px; right: -100px;
+      --dur: 8s;
+    }
+
+    .orb--2 {
+      width: 300px; height: 300px;
+      background: var(--walnut);
+      bottom: -80px; left: -80px;
+      --dur: 10s;
+    }
+
+    .orb--3 {
+      width: 200px; height: 200px;
+      background: var(--sand);
+      top: 40%; left: 30%;
+      --dur: 7s;
+      opacity: 0.08;
+    }
+
+    /* ── Content ── */
+    .maint-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: var(--space-8) var(--space-6);
+      max-width: 640px;
+      width: 100%;
+    }
+
+    /* Logo */
+    .maint-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-10);
+      animation: fadeInDown 0.8s ease forwards;
+    }
+
+    .maint-logo-mark {
+      width: 56px;
+      height: 56px;
+      background: var(--bronze);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: var(--fs-2xl);
+      font-weight: 800;
+      color: var(--warm-white);
+      box-shadow: 0 8px 32px rgba(176,141,87,0.35);
+    }
+
+    .maint-logo-name {
+      font-family: var(--font-serif);
+      font-size: var(--fs-2xl);
+      font-weight: 700;
+      color: var(--warm-white);
+      letter-spacing: -0.01em;
+    }
+
+    .maint-logo-name span { color: var(--bronze-light); }
+
+    /* Icon */
+    .maint-icon {
+      font-size: 72px;
+      display: block;
+      margin-bottom: var(--space-6);
+      animation: float 4s ease-in-out infinite, fadeInUp 0.9s ease 0.1s forwards;
+      opacity: 0;
+    }
+
+    /* Title */
+    .maint-title {
+      font-family: var(--font-serif);
+      font-size: clamp(var(--fs-3xl), 5vw, var(--fs-5xl));
+      font-weight: 800;
+      color: var(--warm-white);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--space-4);
+      animation: fadeInUp 0.9s ease 0.2s forwards;
+      opacity: 0;
+    }
+
+    .maint-title em {
+      font-style: italic;
+      color: var(--bronze-light);
+    }
+
+    /* Subtitle */
+    .maint-subtitle {
+      font-size: var(--fs-lg);
+      color: rgba(250,248,245,0.65);
+      line-height: 1.7;
+      max-width: 46ch;
+      margin: 0 auto var(--space-10);
+      animation: fadeInUp 0.9s ease 0.35s forwards;
+      opacity: 0;
+    }
+
+    /* Countdown */
+    .maint-countdown {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-10);
+      animation: fadeInUp 0.9s ease 0.5s forwards;
+      opacity: 0;
+    }
+
+    .countdown-unit {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5) var(--space-6);
+      min-width: 100px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all var(--transition-base);
+    }
+
+    .countdown-unit:hover {
+      background: rgba(176,141,87,0.12);
+      border-color: rgba(176,141,87,0.3);
+      transform: translateY(-4px);
+    }
+
+    .countdown-num {
+      font-family: var(--font-serif);
+      font-size: clamp(var(--fs-3xl), 5vw, var(--fs-4xl));
+      font-weight: 800;
+      color: var(--warm-white);
+      line-height: 1;
+      display: block;
+      margin-bottom: var(--space-1);
+    }
+
+    .countdown-label {
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bronze-light);
+    }
+
+    /* Progress bar */
+    .maint-progress {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto var(--space-10);
+      animation: fadeInUp 0.9s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    .maint-progress-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-bottom: var(--space-3);
+    }
+
+    .maint-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--bronze), var(--bronze-light));
+      border-radius: var(--radius-full);
+      animation: progressFill 3s ease 1s forwards;
+      width: 0%;
+    }
+
+    @keyframes progressFill {
+      to { width: 73%; }
+    }
+
+    .maint-progress-label {
+      font-size: var(--fs-xs);
+      color: rgba(234,219,200,0.5);
+      font-weight: 600;
+    }
+
+    /* Email notify */
+    .maint-notify {
+      animation: fadeInUp 0.9s ease 0.7s forwards;
+      opacity: 0;
+      margin-bottom: var(--space-8);
+    }
+
+    .maint-notify p {
+      font-size: var(--fs-sm);
+      color: rgba(250,248,245,0.6);
+      margin-bottom: var(--space-4);
+    }
+
+    .maint-notify-form {
+      display: flex;
+      max-width: 380px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      transition: all var(--transition-base);
+    }
+
+    .maint-notify-form:focus-within {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--bronze);
+      box-shadow: 0 0 0 3px rgba(176,141,87,0.2);
+    }
+
+    .maint-notify-input {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: var(--space-3) var(--space-5);
+      font-family: var(--font-sans);
+      font-size: var(--fs-sm);
+      color: var(--warm-white);
+      outline: none;
+    }
+
+    .maint-notify-input::placeholder { color: rgba(250,248,245,0.35); }
+
+    .maint-notify-btn {
+      background: var(--bronze);
+      border: none;
+      padding: var(--space-3) var(--space-5);
+      cursor: pointer;
+      color: white;
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      font-family: var(--font-sans);
+      transition: background var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .maint-notify-btn:hover { background: var(--walnut); }
+
+    /* Social links */
+    .maint-social {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: center;
+      animation: fadeInUp 0.9s ease 0.85s forwards;
+      opacity: 0;
+    }
+
+    .maint-social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(250,248,245,0.7);
+      text-decoration: none;
+      transition: all var(--transition-base);
+    }
+
+    .maint-social-link:hover {
+      background: var(--bronze);
+      border-color: var(--bronze);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(176,141,87,0.3);
+    }
+
+    /* Particles */
+    .particle {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+      animation: particleFloat var(--dur) ease-in-out infinite;
+      opacity: 0;
+    }
+
+    @keyframes particleFloat {
+      0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10%  { opacity: var(--op); }
+      90%  { opacity: var(--op); }
+      100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+    }
+
+    /* Toast container */
+    .toast-container {
+      position: fixed;
+      bottom: var(--space-6);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      .countdown-unit { min-width: 72px; padding: var(--space-4); }
+      .maint-countdown { gap: var(--space-3); }
+      html, body { overflow: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Animated background -->
+<div class="maint-bg" aria-hidden="true"></div>
+<div class="maint-mesh" aria-hidden="true"></div>
+
+<!-- Floating orbs -->
+<div class="orb orb--1" aria-hidden="true"></div>
+<div class="orb orb--2" aria-hidden="true"></div>
+<div class="orb orb--3" aria-hidden="true"></div>
+
+<!-- Particles container -->
+<div id="particles" aria-hidden="true"></div>
+
+<!-- Main content -->
+<main class="maint-content" role="main">
+
+  <!-- Logo -->
+  <div class="maint-logo">
+    <div class="maint-logo-mark">L</div>
+    <div class="maint-logo-name">Lumière <span>Home</span></div>
+  </div>
+
+  <!-- Wrench icon -->
+  <span class="maint-icon" role="img" aria-label="Under maintenance"><svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M14 10L4 20"/><path d="M15 9l4-4a1 1 0 0 1 1.4 0l.6.6a1 1 0 0 1 0 1.4l-4 4"/><path d="M10 14l-2 2"/></svg></span>
+
+  <!-- Title -->
+  <h1 class="maint-title">
+    We're Crafting <em>Something Beautiful</em>
+  </h1>
+
+  <!-- Subtitle -->
+  <p class="maint-subtitle">
+    Our website is undergoing scheduled maintenance and upgrades — just like a room being transformed by our design team. We'll be back shortly with a refreshed experience.
+  </p>
+
+  <!-- Countdown timer -->
+  <div class="maint-countdown" role="timer" aria-live="polite" aria-label="Time until site is back">
+    <div class="countdown-unit">
+      <span class="countdown-num" id="cd-hours">00</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+    <div class="countdown-unit">
+      <span class="countdown-num" id="cd-mins">00</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+    <div class="countdown-unit">
+      <span class="countdown-num" id="cd-secs">00</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="maint-progress">
+    <div class="maint-progress-bar">
+      <div class="maint-progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="maint-progress-label" id="progress-label">Upgrade in progress — 73% complete</div>
+  </div>
+
+  <!-- Notify form -->
+  <div class="maint-notify">
+    <p>Be the first to know when we're back — enter your email for a notification.</p>
+    <div class="maint-notify-form">
+      <input type="email" class="maint-notify-input" id="notify-email" placeholder="your@email.com" aria-label="Email for notification" />
+      <button type="button" class="maint-notify-btn" id="notify-btn">Notify Me</button>
+    </div>
+  </div>
+
+  <!-- Social links -->
+  <div class="maint-social">
+    <a href="#" class="maint-social-link" aria-label="Follow us on Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="#" class="maint-social-link" aria-label="Follow us on Pinterest">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+    </a>
+    <a href="#" class="maint-social-link" aria-label="Follow us on Facebook">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="mailto:hello@lumierehome.com" class="maint-social-link" aria-label="Email us">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+    <a href="tel:+442079460000" class="maint-social-link" aria-label="Call us">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+</main>
+
+<div class="toast-container" aria-live="polite"></div>
+
+<script>
+/* ── Countdown timer ── */
+(function() {
+  /* Target: 6 hours from first load */
+  const stored = localStorage.getItem('lh_maint_end');
+  let target;
+  if (stored) {
+    target = new Date(stored);
+  } else {
+    target = new Date(Date.now() + 6 * 60 * 60 * 1000);
+    localStorage.setItem('lh_maint_end', target.toISOString());
+  }
+
+  const hoursEl = document.getElementById('cd-hours');
+  const minsEl  = document.getElementById('cd-mins');
+  const secsEl  = document.getElementById('cd-secs');
+
+  function pad(n) { return String(Math.max(0, Math.floor(n))).padStart(2, '0'); }
+
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      hoursEl.textContent = '00';
+      minsEl.textContent  = '00';
+      secsEl.textContent  = '00';
+      return;
+    }
+    const totalSecs = diff / 1000;
+    const h = totalSecs / 3600;
+    const m = (totalSecs % 3600) / 60;
+    const s = totalSecs % 60;
+    hoursEl.textContent = pad(h);
+    minsEl.textContent  = pad(m);
+    secsEl.textContent  = pad(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+
+/* ── Notify button ── */
+document.getElementById('notify-btn')?.addEventListener('click', function() {
+  const email = document.getElementById('notify-email')?.value.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showToast('⚠️ Please enter a valid email address.', 'error');
+    return;
+  }
+  this.innerHTML = 'Subscribed <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle"><polyline points="20 6 9 17 4 12"/></svg>';
+  this.disabled = true;
+  showToast('🔔 We\'ll notify you at ' + email + ' when we\'re back!', 'success', 5000);
+  document.getElementById('notify-email').value = '';
+});
+
+/* ── Simple toast ── */
+function showToast(msg, type = 'default', duration = 3500) {
+  const container = document.querySelector('.toast-container');
+  if (!container) return;
+  const toast = document.createElement('div');
+  const colors = { success: '#28a745', error: '#dc3545', default: 'rgba(44,44,44,0.95)' };
+  toast.style.cssText = `
+    background: ${colors[type] || colors.default};
+    color: white; padding: 12px 20px; border-radius: 999px;
+    font-size: 14px; font-weight: 600; font-family: sans-serif;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    animation: fadeInUp 0.3s ease; white-space: nowrap;
+    max-width: 90vw; text-align: center;
+  `;
+  toast.textContent = msg;
+  container.appendChild(toast);
+  setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = 'opacity 0.3s ease'; setTimeout(() => toast.remove(), 300); }, duration);
+}
+
+/* ── Floating particles ── */
+function createParticles() {
+  const container = document.getElementById('particles');
+  if (!container) return;
+  const colors = ['rgba(176,141,87,0.4)', 'rgba(234,219,200,0.3)', 'rgba(92,64,51,0.3)', 'rgba(250,248,245,0.2)'];
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement('div');
+    const size = Math.random() * 6 + 2;
+    const dur  = Math.random() * 15 + 10;
+    const delay = Math.random() * 15;
+    const left = Math.random() * 100;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const opacity = Math.random() * 0.5 + 0.1;
+    p.className = 'particle';
+    p.style.cssText = `
+      width: ${size}px; height: ${size}px;
+      left: ${left}vw;
+      background: ${color};
+      --dur: ${dur}s;
+      --op: ${opacity};
+      animation-delay: -${delay}s;
+    `;
+    container.appendChild(p);
+  }
+}
+createParticles();
+</script>
+</body>
+</html>

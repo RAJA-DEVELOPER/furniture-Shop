@@ -1,0 +1,254 @@
+/* ============================================================
+   ANIMATIONS — Keyframes, Transitions, Micro-interactions
+   ============================================================ */
+
+/* ── Core Keyframes ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(1); }
+  to   { transform: scale(1.05); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes progressBar {
+  from { width: 0%; }
+  to   { width: var(--target-width, 80%); }
+}
+
+@keyframes counterUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25%       { transform: scale(1.25); }
+  50%       { transform: scale(0.95); }
+  75%       { transform: scale(1.15); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(176,141,87,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(176,141,87,0); }
+}
+
+/* ── Animation Utility Classes ── */
+.anim-fade-in   { animation: fadeIn 0.6s ease forwards; }
+.anim-fade-up   { animation: fadeUp 0.6s ease forwards; }
+.anim-scale-in  { animation: scaleIn 0.5s ease forwards; }
+.anim-float     { animation: float 4s ease-in-out infinite; }
+.anim-pulse     { animation: pulse 2s ease-in-out infinite; }
+
+/* ── Hero Animations ── */
+.hero-title    { animation: fadeUp 0.9s ease 0.2s both; }
+.hero-subtitle { animation: fadeUp 0.9s ease 0.45s both; }
+.hero-cta      { animation: fadeUp 0.9s ease 0.65s both; }
+.hero-badge    { animation: fadeDown 0.7s ease 0.1s both; }
+
+/* ── Ken Burns Effect ── */
+.ken-burns {
+  animation: scaleUp 8s ease-in-out infinite alternate;
+}
+
+/* ── Text Underline Draw ── */
+.underline-draw {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-draw::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--bronze);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease 0.3s;
+}
+
+.underline-draw.revealed::after {
+  transform: scaleX(1);
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--walnut) 0%, var(--bronze) 50%, var(--bronze-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Shimmer Skeleton ── */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 37%, #f0f0f0 63%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── Hover — Scale ── */
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover { transform: scale(1.04); }
+
+/* ── Hover — Lift ── */
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── Hover — Brighten ── */
+.hover-brighten { transition: filter var(--transition-base); }
+.hover-brighten:hover { filter: brightness(1.05); }
+
+/* ── Image Zoom Container ── */
+.zoom-container {
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.zoom-container img,
+.zoom-container .img-placeholder {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.zoom-container:hover img,
+.zoom-container:hover .img-placeholder {
+  transform: scale(1.08);
+}
+
+/* ── Stagger Children ── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-children.revealed > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0s; }
+.stagger-children.revealed > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.1s; }
+.stagger-children.revealed > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.2s; }
+.stagger-children.revealed > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.3s; }
+.stagger-children.revealed > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.4s; }
+.stagger-children.revealed > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.5s; }
+
+/* ── Wishlist Heart ── */
+.wishlist-btn.active svg {
+  fill: var(--walnut);
+  stroke: var(--walnut);
+  animation: heartbeat 0.6s ease;
+}
+
+/* ── Loading Spinner ── */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--sand);
+  border-top-color: var(--bronze);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── Counter Number ── */
+.counter-number {
+  animation: counterUp 0.6s ease forwards;
+}
+
+/* ── Parallax Layer ── */
+.parallax-layer {
+  will-change: transform;
+}
+
+/* ── Page Transition ── */
+.page-enter {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

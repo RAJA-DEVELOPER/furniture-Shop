@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Home Gallery — Browse our living room, bedroom, dining, kitchen, office, and outdoor furniture photography. Filter by room and open in full lightbox." />
+  <title>Gallery — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    /* ── Gallery page extras ── */
+    .gallery-section { padding: var(--space-section) 0; }
+
+    /* Category anchor rows */
+    .gallery-category-heading {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin: var(--space-12) 0 var(--space-6);
+    }
+
+    .gallery-category-heading h2 {
+      white-space: nowrap;
+      font-size: var(--fs-xl);
+    }
+
+    .gallery-category-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--sand);
+    }
+
+    /* Grid alternating heights for visual interest */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+
+    .gallery-grid--4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-cell {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery-cell .img-placeholder {
+      transition: transform var(--transition-slow);
+    }
+
+    .gallery-cell:hover .img-placeholder {
+      transform: scale(1.06);
+    }
+
+    .gallery-cell__label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: var(--space-4) var(--space-5);
+      background: linear-gradient(to top, rgba(44,44,44,0.88) 0%, transparent 100%);
+      color: var(--warm-white);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: all var(--transition-base);
+    }
+
+    .gallery-cell:hover .gallery-cell__label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-cell__tag {
+      font-size: var(--fs-xs);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bronze-light);
+      font-weight: 600;
+    }
+
+    .gallery-cell__name {
+      font-family: var(--font-serif);
+      font-size: var(--fs-lg);
+      font-weight: 600;
+    }
+
+    /* Span helpers */
+    .span-2 { grid-column: span 2; }
+    .span-2-row { grid-row: span 2; }
+
+    /* Customer homes masonry */
+    .customer-masonry {
+      columns: 4;
+      column-gap: var(--space-4);
+    }
+
+    .customer-photo {
+      break-inside: avoid;
+      margin-bottom: var(--space-4);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+
+    .customer-photo:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    /* Filter sticky bar */
+    .filter-bar {
+      position: sticky;
+      top: calc(var(--nav-height) - 12px);
+      z-index: 100;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border-bottom: 1px solid var(--glass-border);
+      padding: var(--space-4) 0;
+      box-shadow: var(--glass-shadow);
+    }
+
+    .filter-bar-inner {
+      display: flex;
+      gap: var(--space-3);
+      align-items: center;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 0 var(--space-6);
+    }
+
+    .filter-bar-inner::-webkit-scrollbar { display: none; }
+
+    .filter-bar-label {
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--charcoal-soft);
+      white-space: nowrap;
+      margin-right: var(--space-2);
+    }
+
+    @media (max-width: 992px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid--4 { grid-template-columns: repeat(2, 1fr); }
+      .span-2 { grid-column: span 1; }
+      .customer-masonry { columns: 2; }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid,
+      .gallery-grid--4 { grid-template-columns: 1fr; }
+      .customer-masonry { columns: 1; }
+    }
+  </style>
+<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar__logo">
+        <div class="navbar__logo-mark">L</div>
+        <span class="navbar__logo-text">Lumière <span>Home</span></span>
+      </a>
+      <ul class="navbar__menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar__icons">
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+<nav class="navbar__mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span></div>
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ══ HERO ══ -->
+<section class="page-hero" aria-labelledby="gallery-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/home-office.png" alt="Beautiful Interior Spaces" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <div class="page-hero__label page-hero__label--center">Visual Portfolio</div>
+      <h1 class="page-hero__title" id="gallery-hero-title">Our Furniture in <em>Beautiful Spaces</em></h1>
+      <p class="page-hero__subtitle">Explore every collection — from living room centrepieces to bedroom sanctuaries. Click any piece to view in full.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STICKY FILTER BAR ══ -->
+<div class="filter-bar" role="navigation" aria-label="Gallery category filter">
+  <div class="filter-bar-inner">
+    <span class="filter-bar-label">Filter:</span>
+    <button class="filter-btn active" data-filter="all" id="filter-all">All Rooms</button>
+    <button class="filter-btn" data-filter="living" id="filter-living">Living Room</button>
+    <button class="filter-btn" data-filter="bedroom" id="filter-bedroom">Bedroom</button>
+    <button class="filter-btn" data-filter="dining" id="filter-dining">Dining Room</button>
+    <button class="filter-btn" data-filter="kitchen" id="filter-kitchen">Kitchen</button>
+    <button class="filter-btn" data-filter="office" id="filter-office">Office</button>
+    <button class="filter-btn" data-filter="outdoor" id="filter-outdoor">Outdoor</button>
+    <button class="filter-btn" data-filter="decor" id="filter-decor">Décor</button>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: LIVING ROOM ══ -->
+<section class="gallery-section" id="living" aria-label="Living Room Gallery">
+  <div class="container">
+    <div class="gallery-category-heading reveal">
+      <span class="section-label" style="margin: 0;">Living Room</span>
+      <h2>Comfort &amp; Style</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-cell span-2 reveal delay-1" data-category="living" data-lightbox data-caption="Milano Velvet Sofa — 3-seater in Midnight Blue" style="height: 380px;">
+        <img src="images/hero-living-room.png" alt="Milano Velvet Sofa" class="img-real" style="height:380px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label">
+          <div class="gallery-cell__tag">Living Room</div>
+          <div class="gallery-cell__name">Milano Velvet Sofa</div>
+        </div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="living" data-lightbox data-caption="Walnut Armchair — Cognac leather" style="height: 380px;">
+        <img src="images/product-armchair.png" alt="Walnut Armchair" class="img-real" style="height:380px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">Walnut Armchair</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-1" data-category="living" data-lightbox data-caption="Bronze Coffee Table — Marble top" style="height: 260px;">
+        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">Bronze Coffee Table</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="living" data-lightbox data-caption="Bookshelving Unit — White Oak" style="height: 260px;">
+        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">White Oak Shelving</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-3" data-category="living" data-lightbox data-caption="Media Console — Dark Walnut" style="height: 260px;">
+        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">Media Console</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: BEDROOM ══ -->
+<section class="gallery-section" id="bedroom" style="background: var(--cream);" aria-label="Bedroom Gallery">
+  <div class="container">
+    <div class="gallery-category-heading reveal">
+      <span class="section-label" style="margin: 0;">Bedroom</span>
+      <h2>Rest &amp; Serenity</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-cell reveal delay-1" data-category="bedroom" data-lightbox data-caption="Osaka Platform Bed — White Oak, King" style="height: 320px;">
+        <img src="images/bedroom-interior.png" alt="Osaka Platform Bed" class="img-real" style="height:320px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Osaka Platform Bed</div></div>
+      </div>
+      <div class="gallery-cell span-2 reveal delay-2" data-category="bedroom" data-lightbox data-caption="Kyoto Suite — Full bedroom in warm tones" style="height: 320px;">
+        <img src="images/dining-room.png" alt="Kyoto Suite bedroom" class="img-real" style="height:320px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Kyoto Suite</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-1" data-category="bedroom" data-lightbox data-caption="Nordic Wardrobe — Sliding doors" style="height: 260px;">
+        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Nordic Wardrobe</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="bedroom" data-lightbox data-caption="Dressing Table — Brass mirror frame" style="height: 260px;">
+        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Dressing Table</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-3" data-category="bedroom" data-lightbox data-caption="Sage Bedside Tables — White Oak" style="height: 260px;">
+        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Sage Bedside Tables</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: DINING ROOM ══ -->
+<section class="gallery-section" id="dining" aria-label="Dining Room Gallery">
+  <div class="container">
+    <div class="gallery-category-heading reveal">
+      <span class="section-label" style="margin: 0;">Dining Room</span>
+      <h2>Gather &amp; Celebrate</h2>
+    </div>
+    <div class="gallery-grid--4 gallery-grid reveal">
+      <div class="gallery-cell span-2 reveal delay-1" data-category="dining" data-lightbox data-caption="Florence Dining Table — Solid Walnut 8-seater" style="height: 300px;">
+        <img src="images/dining-room.png" alt="Florence Dining Table" class="img-real" style="height:300px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Dining</div><div class="gallery-cell__name">Florence Dining Table</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="dining" data-lightbox data-caption="Scandinavian Dining Chairs" style="height: 300px;">
+        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Dining</div><div class="gallery-cell__name">Scandinavian Chairs</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-3" data-category="dining" data-lightbox data-caption="Sideboard — Dark Walnut with brass handles" style="height: 300px;">
+        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Dining</div><div class="gallery-cell__name">Walnut Sideboard</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: KITCHEN ══ -->
+<section class="gallery-section" id="kitchen" style="background: var(--sand-light);" aria-label="Kitchen Gallery">
+  <div class="container">
+    <div class="gallery-category-heading reveal">
+      <span class="section-label" style="margin: 0;">Kitchen</span>
+      <h2>Functional Beauty</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-cell reveal delay-1" data-category="kitchen" data-lightbox data-caption="Kitchen Island — Marble top, Shaker cabinets" style="height: 280px;">
+        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Kitchen</div><div class="gallery-cell__name">Marble Island</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="kitchen" data-lightbox data-caption="Breakfast Stools — Oak & leather" style="height: 280px;">
+        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Kitchen</div><div class="gallery-cell__name">Breakfast Stools</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-3" data-category="kitchen" data-lightbox data-caption="Pantry Cabinet — Sage green" style="height: 280px;">
+        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Kitchen</div><div class="gallery-cell__name">Pantry Cabinet</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: OFFICE ══ -->
+<section class="gallery-section" id="office" aria-label="Office Gallery">
+  <div class="container">
+    <div class="gallery-category-heading reveal">
+      <span class="section-label" style="margin: 0;">Office</span>
+      <h2>Inspire Productivity</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-cell reveal delay-1" data-category="office" data-lightbox data-caption="Brentwood Executive Desk — Dark Walnut 180cm" style="height: 280px;">
+        <img src="images/home-office.png" alt="Executive Desk" class="img-real" style="height:280px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Office</div><div class="gallery-cell__name">Executive Desk</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="office" data-lightbox data-caption="Hudson Lounge Chair — Full-grain leather" style="height: 280px;">
+        <img src="images/product-armchair.png" alt="Hudson Lounge Chair" class="img-real" style="height:280px;object-fit:cover;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Office</div><div class="gallery-cell__name">Hudson Lounge Chair</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-3" data-category="office" data-lightbox data-caption="Modular Bookcase — White Oak, floor-to-ceiling" style="height: 280px;">
+        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Office</div><div class="gallery-cell__name">Modular Bookcase</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: DECOR COLLECTION ══ -->
+<section class="gallery-section" id="decor" style="background: var(--charcoal);" aria-label="Décor Collection Gallery">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center" style="color: var(--bronze-light);">Finishing Touches</div>
+      <h2 class="section-title" style="color: var(--warm-white);">Décor &amp; Accessories</h2>
+      <p class="section-subtitle" style="color: rgba(234,219,200,0.6); margin: 0 auto;">The details that complete a space — curated vases, mirrors, lighting, and more.</p>
+    </div>
+
+    <div class="gallery-grid--4 gallery-grid" style="margin-top: var(--space-10);" data-category="decor">
+      <div class="gallery-cell reveal delay-1" data-category="decor" data-lightbox data-caption="Brass Vase Collection" style="height: 240px;">
+        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Brass Vase</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-2" data-category="decor" data-lightbox data-caption="Statement Mirror — Arch frame" style="height: 240px;">
+        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Arch Mirror</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-3" data-category="decor" data-lightbox data-caption="Linen Throw Cushions" style="height: 240px;">
+        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Linen Cushions</div></div>
+      </div>
+      <div class="gallery-cell reveal delay-4" data-category="decor" data-lightbox data-caption="Pendant Lighting — Rattan shade" style="height: 240px;">
+        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Rattan Pendant</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 7: CUSTOMER HOMES ══ -->
+<section class="gallery-section" aria-labelledby="customer-homes-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Real Homes</div>
+      <h2 class="section-title" id="customer-homes-title">Our Furniture in Your Homes</h2>
+      <p class="section-subtitle">Tag us @lumierehome and your space might be featured here — a growing community of beautiful homes.</p>
+    </div>
+
+    <div class="customer-masonry" style="margin-top: var(--space-10);">
+      <div class="customer-photo reveal delay-1" data-lightbox data-caption="@sophia_m — London Home">
+        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@sophia_m</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">London, UK</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-2" data-lightbox data-caption="@j_whitfield — New York Loft">
+        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@j_whitfield</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">New York, USA</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-1" data-lightbox data-caption="@elena_v — Dubai Villa">
+        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@elena_v</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Dubai, UAE</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-3" data-lightbox data-caption="@amara_o — Sydney Home">
+        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@amara_o</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Sydney, Australia</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-2" data-lightbox data-caption="@marco_r — Milan Apartment">
+        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@marco_r</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Milan, Italy</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-4" data-lightbox data-caption="@yuki_t — Tokyo Residence">
+        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@yuki_t</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Tokyo, Japan</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-1" data-lightbox data-caption="@michael_c — Singapore Penthouse">
+        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@michael_c</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Singapore</div>
+        </div>
+      </div>
+      <div class="customer-photo reveal delay-3" data-lightbox data-caption="@amelia_t — Melbourne Home">
+        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
+          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@amelia_t</div>
+          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Melbourne, AU</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 8: VISIT STORE CTA ══ -->
+<section class="section" id="visit-store" style="background: linear-gradient(160deg, var(--walnut-dark) 0%, var(--walnut) 50%, var(--bronze-dark) 100%); position: relative; overflow: hidden;" aria-labelledby="visit-store-title">
+  <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(176,141,87,0.2) 0%, transparent 60%);"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="reveal" style="max-width: 660px; margin: 0 auto; text-align: center;">
+      <div class="section-label section-label--center" style="color: var(--bronze-light);">Experience it Live</div>
+      <h2 class="section-title text-center" id="visit-store-title" style="color: var(--warm-white);">See It In Person at Our Showroom</h2>
+      <p style="color: rgba(250,248,245,0.7); max-width: 50ch; margin: 0 auto var(--space-8); font-size: var(--fs-lg);">
+        Nothing beats experiencing the textures, colours, and scale of our furniture in person. Visit our 5,000 sq ft London showroom.
+      </p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn--bronze btn--lg">Book a Showroom Visit</a>
+        <a href="contact.html#map" class="btn btn--ghost btn--lg">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo"><div class="footer__logo-mark">L</div><div class="footer__logo-name">Lumière <span>Home</span></div></div>
+        <p>Where timeless craftsmanship meets modern luxury since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Collections</h5><ul class="footer__links"><li><a href="#living">Living Room</a></li><li><a href="#bedroom">Bedroom</a></li><li><a href="#dining">Dining Room</a></li><li><a href="#kitchen">Kitchen</a></li><li><a href="#office">Office</a></li><li><a href="#decor">Décor</a></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Legal</h5><ul class="footer__links"><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      <div class="footer__col"><h5>Newsletter</h5><form class="newsletter-form" novalidate><input type="email" placeholder="Your email" aria-label="Email" /><button type="submit" aria-label="Subscribe">→</button></form></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <div class="footer__legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<style>
+.lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s ease;backdrop-filter:blur(8px);}
+.lightbox-overlay.open{opacity:1;visibility:visible;}
+.lightbox-container{position:relative;width:min(800px,92vw);display:flex;align-items:center;gap:var(--space-4);}
+.lightbox-content{flex:1;}
+.lightbox-image{width:100%;aspect-ratio:4/3;border-radius:var(--radius-xl);background:var(--sand);transition:background .4s ease;}
+.lightbox-caption{text-align:center;color:rgba(255,255,255,0.7);font-size:var(--fs-sm);margin-top:var(--space-4);font-family:var(--font-serif);font-style:italic;}
+.lightbox-close{position:absolute;top:-52px;right:0;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s ease;}
+.lightbox-close:hover{background:var(--bronze);}
+.lightbox-prev,.lightbox-next{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s ease;flex-shrink:0;}
+.lightbox-prev:hover,.lightbox-next:hover{background:var(--bronze);}
+</style>
+
+<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<div class="toast-container" aria-live="polite"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/gallery.js"></script>
+<script>
+/* ── Gallery filter: show/hide full sections ── */
+const filterBtns = document.querySelectorAll('[data-filter]');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+
+    document.querySelectorAll('.gallery-cell, .customer-photo').forEach(cell => {
+      const cat = cell.dataset.category;
+      if (!cat) return;
+      const show = filter === 'all' || cat === filter;
+      cell.style.display = show ? '' : 'none';
+      if (show) cell.style.animation = 'scaleIn 0.4s ease forwards';
+    });
+
+    /* Also toggle category heading sections */
+    document.querySelectorAll('.gallery-section').forEach(sec => {
+      if (filter === 'all') { sec.style.display = ''; return; }
+      const id = sec.id;
+      sec.style.display = (id === filter || id === 'decor' && filter === 'decor' || !id) ? '' : 'none';
+    });
+  });
+});
+</script>
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

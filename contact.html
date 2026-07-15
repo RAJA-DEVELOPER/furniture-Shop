@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Lumière Home — Visit our showroom, send an enquiry, book a design consultation, or find our store location in London." />
+  <title>Contact — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar__logo"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text">Lumière <span>Home</span></span></a>
+      <ul class="navbar__menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="navbar__icons">
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+<nav class="navbar__mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="navbar__logo" style="margin-bottom:2rem;"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text" style="color:var(--charcoal);">Lumière <span>Home</span></span></div>
+  <ul class="mobile-nav-links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+
+<main id="main">
+
+<!-- ══ SECTION 1: PAGE HERO ══ -->
+<section class="page-hero" aria-labelledby="contact-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/bedroom-interior.png" alt="Lumière Home Showroom" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <div class="page-hero__label page-hero__label--center">Get In Touch</div>
+      <h1 class="page-hero__title" id="contact-hero-title">We'd Love to <em>Hear From You</em></h1>
+      <p class="page-hero__subtitle">Visit our showroom, send a message, or book a design consultation — our team responds within 24 hours.</p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#contact-form" class="btn btn--bronze btn--lg">Send Enquiry</a>
+        <a href="#map" class="btn btn--ghost btn--lg">Find Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: STORE INFO + CONTACT FORM ══ -->
+<section class="section" id="contact-form" aria-labelledby="contact-form-title">
+  <div class="container">
+    <div class="contact-top">
+      <!-- Info Cards -->
+      <div>
+        <div class="section-label" style="margin-bottom: var(--space-4);">Store Information</div>
+        <h2 class="section-title" id="contact-form-title" style="margin-bottom: var(--space-8);">Find Us</h2>
+        <div class="contact-info-cards">
+          <div class="contact-info-card reveal delay-1">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="currentColor"/></svg></div>
+            <div>
+              <div class="contact-info-title">Flagship Showroom</div>
+              <div class="contact-info-value">14 Kensington High Street<br>London W8 4PT, United Kingdom</div>
+            </div>
+          </div>
+          <div class="contact-info-card reveal delay-2">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <div class="contact-info-title">Telephone</div>
+              <div class="contact-info-value">
+                <a href="tel:+442079460000" style="color: var(--bronze);">+44 20 7946 0000</a><br>
+                <span style="font-size: var(--fs-xs);">Mon–Sat 10am–7pm</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-card reveal delay-3">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg></div>
+            <div>
+              <div class="contact-info-title">Email</div>
+              <div class="contact-info-value">
+                <a href="mailto:hello@lumierehome.com" style="color: var(--bronze);">hello@lumierehome.com</a><br>
+                <a href="mailto:trade@lumierehome.com" style="color: var(--bronze);">trade@lumierehome.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-card reveal delay-4">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M4 13h16"/><path d="M4 9h16"/></svg></div>
+            <div>
+              <div class="contact-info-title">Nearest Transport</div>
+              <div class="contact-info-value">High Street Kensington (District Line)<br>3 min walk · Free parking on-site</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Panel -->
+      <div class="contact-form-panel reveal-right">
+        <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--space-2);">Send an Enquiry</h2>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); margin-bottom: var(--space-8);">Fill in the form and our team will be in touch within 24 hours.</p>
+
+        <form id="contact-form-el" novalidate aria-label="Contact enquiry form">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="cf-first">First Name *</label>
+              <input class="form-control" type="text" id="cf-first" name="first_name" placeholder="Elena" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-last">Last Name *</label>
+              <input class="form-control" type="text" id="cf-last" name="last_name" placeholder="Marchetti" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email Address *</label>
+              <input class="form-control" type="email" id="cf-email" name="email" placeholder="elena@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-phone">Phone Number</label>
+              <input class="form-control" type="tel" id="cf-phone" name="phone" placeholder="+44 7xxx xxxxxx" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-subject">Subject *</label>
+            <select class="form-control" id="cf-subject" name="subject" required>
+              <option value="" disabled selected>Select an enquiry type</option>
+              <option>Product Enquiry</option>
+              <option>Design Consultation</option>
+              <option>Custom Order</option>
+              <option>Delivery & Installation</option>
+              <option>Trade / Wholesale</option>
+              <option>Warranty / After-care</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Message *</label>
+            <textarea class="form-control" id="cf-message" name="message" rows="5" placeholder="Tell us about your space, the pieces you're interested in, or anything else we can help with..." required></textarea>
+          </div>
+          <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: var(--space-3);">
+            <input type="checkbox" id="cf-consent" name="consent" required style="width: auto; margin-top: 3px; flex-shrink: 0;" />
+            <label for="cf-consent" style="font-size: var(--fs-xs); color: var(--charcoal-soft); cursor: pointer;">I agree to receive communications from Lumière Home regarding my enquiry. I have read the <a href="#" style="color: var(--bronze);">Privacy Policy</a>.</label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg" id="contact-submit" style="width: 100%;">
+            <span id="submit-text">Send Enquiry</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: MAP ══ -->
+<section class="section section--small" id="map" style="background: var(--sand-light);" aria-labelledby="map-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Location</div>
+      <h2 class="section-title" id="map-title">Find Our Showroom</h2>
+    </div>
+    <div class="map-embed reveal">
+      <iframe
+        src="https://maps.google.com/maps?q=14+Kensington+High+Street+London&output=embed&z=15"
+        width="100%"
+        height="420"
+        style="border:0; border-radius: var(--radius-2xl); display: block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map showing showroom location at 14 Kensington High Street, London">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: WORKING HOURS ══ -->
+<section class="section" id="hours" aria-labelledby="hours-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">When to Visit</div>
+      <h2 class="section-title" id="hours-title">Opening Hours</h2>
+      <p class="section-subtitle">Our team is available to assist you in person, by phone, or via email during the hours below.</p>
+    </div>
+    <div class="hours-grid">
+      <div class="hours-card reveal delay-1">
+        <div class="hours-card__day">Monday – Friday</div>
+        <div class="hours-card__time">10:00 – 19:00</div>
+        <div class="hours-card__note">Last entry at 18:30</div>
+      </div>
+      <div class="hours-card reveal delay-2">
+        <div class="hours-card__day">Saturday</div>
+        <div class="hours-card__time">10:00 – 18:00</div>
+        <div class="hours-card__note">Last entry at 17:30</div>
+      </div>
+      <div class="hours-card reveal delay-3">
+        <div class="hours-card__day">Sunday</div>
+        <div class="hours-card__time">12:00 – 17:00</div>
+        <div class="hours-card__note">Bank Holidays: 12:00 – 16:00</div>
+      </div>
+    </div>
+
+    <!-- Extra info row -->
+    <div class="grid grid-3" style="gap: var(--space-5); margin-top: var(--space-8);">
+      <div style="text-align: center; padding: var(--space-5); background: var(--sand-light); border-radius: var(--radius-xl);">
+        <div style="font-size: 28px; margin-bottom: var(--space-3);"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><rect x="2" y="9" width="20" height="9" rx="2"/><circle cx="6" cy="17" r="2" fill="currentColor"/><circle cx="18" cy="17" r="2" fill="currentColor"/><path d="M6 9 8 4h8l2 5"/></svg></div>
+        <div style="font-weight: 700; margin-bottom: var(--space-1);">Free Parking</div>
+        <div style="font-size: var(--fs-sm); color: var(--charcoal-soft);">On-site customer parking available Monday–Saturday</div>
+      </div>
+      <div style="text-align: center; padding: var(--space-5); background: var(--sand-light); border-radius: var(--radius-xl);">
+        <div style="font-size: 28px; margin-bottom: var(--space-3);"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><circle cx="12" cy="5" r="2" fill="currentColor"/><path d="M10 22v-6H8l2-7h4l1 4"/><path d="M14 13h4l-2 6v3"/></svg></div>
+        <div style="font-weight: 700; margin-bottom: var(--space-1);">Fully Accessible</div>
+        <div style="font-size: var(--fs-sm); color: var(--charcoal-soft);">Step-free access, wide corridors, accessible WC</div>
+      </div>
+      <div style="text-align: center; padding: var(--space-5); background: var(--sand-light); border-radius: var(--radius-xl);">
+        <div style="font-size: 28px; margin-bottom: var(--space-3);"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <div style="font-weight: 700; margin-bottom: var(--space-1);">Showroom Café</div>
+        <div style="font-size: var(--fs-sm); color: var(--charcoal-soft);">Complimentary refreshments during your visit</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: BOOK STORE VISIT ══ -->
+<section class="section" id="book-visit" style="background: var(--sand-light);" aria-labelledby="book-visit-title">
+  <div class="container">
+    <div class="grid grid-2" style="gap: var(--space-12); align-items: center;">
+      <div class="reveal-left">
+        <div class="section-label">Showroom Appointment</div>
+        <h2 class="section-title" id="book-visit-title">Schedule Your Visit</h2>
+        <p style="margin-bottom: var(--space-6);">Book an appointment and we'll have a designer ready to walk you through the collection and answer all your questions in a relaxed, no-pressure environment.</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-6);">
+          <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+            <span style="font-size: 18px;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>Dedicated designer</strong>
+              <p style="font-size: var(--fs-sm); margin: 0;">Assigned personally to you for the full appointment</p>
+            </div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+            <span style="font-size: 18px;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>Refreshments included</strong>
+              <p style="font-size: var(--fs-sm); margin: 0;">Coffee, tea, and light refreshments on arrival</p>
+            </div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+            <span style="font-size: 18px;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>Take-home materials</strong>
+              <p style="font-size: var(--fs-sm); margin: 0;">Samples, lookbook, and personalised proposal</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-form-panel reveal-right">
+        <h3 style="font-size: var(--fs-xl); margin-bottom: var(--space-6);">Book Your Appointment</h3>
+        <form id="visit-form" novalidate aria-label="Book a showroom visit">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="vf-name">Full Name *</label>
+              <input class="form-control" type="text" id="vf-name" name="name" placeholder="Your Name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="vf-email">Email *</label>
+              <input class="form-control" type="email" id="vf-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="vf-date">Preferred Date *</label>
+              <input class="form-control" type="date" id="vf-date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="vf-time">Preferred Time *</label>
+              <select class="form-control" id="vf-time" name="time" required>
+                <option value="" disabled selected>Select time</option>
+                <option>10:00 – 11:30</option>
+                <option>11:30 – 13:00</option>
+                <option>14:00 – 15:30</option>
+                <option>15:30 – 17:00</option>
+                <option>17:00 – 18:30</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="vf-rooms">Rooms of Interest</label>
+            <select class="form-control" id="vf-rooms" name="rooms">
+              <option value="" disabled selected>Select room category</option>
+              <option>Living Room</option>
+              <option>Bedroom</option>
+              <option>Dining Room</option>
+              <option>Home Office</option>
+              <option>Kitchen</option>
+              <option>Full Home</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="vf-notes">Additional Notes</label>
+            <textarea class="form-control" id="vf-notes" name="notes" rows="3" placeholder="Any special requirements or items you'd specifically like to see..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--bronze btn--lg" style="width: 100%;">
+            Confirm Booking
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: FAQ ══ -->
+<section class="section" id="contact-faq" aria-labelledby="contact-faq-title">
+  <div class="container container--narrow">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Quick Answers</div>
+      <h2 class="section-title" id="contact-faq-title">Common Questions</h2>
+    </div>
+    <div class="accordion reveal">
+      <div class="accordion-item">
+        <button class="accordion-header"><span class="accordion-question">Do I need an appointment to visit the showroom?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="accordion-body"><p class="accordion-answer">Walk-ins are always welcome during opening hours. However, booking an appointment ensures you have a dedicated designer available and a private viewing experience. We recommend booking for complex projects or if you'd like to discuss custom orders.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span class="accordion-question">How quickly will you respond to my enquiry?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="accordion-body"><p class="accordion-answer">All enquiries submitted via our contact form are responded to within 24 hours during business days. Urgent enquiries can be directed to our telephone line: +44 20 7946 0000.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span class="accordion-question">Can I bring my floor plans to the appointment?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="accordion-body"><p class="accordion-answer">Absolutely — and we encourage it! Bring any floor plans, photos of your space, or inspiration images you have. The more context we have, the more tailored and useful your appointment will be. We can even create a digital mood board for you on the day.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span class="accordion-question">Is parking available at the showroom?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="accordion-body"><p class="accordion-answer">Yes, we offer complimentary parking for customers Monday through Saturday. Enter via the rear car park on Wrights Lane. The showroom is also a 3-minute walk from High Street Kensington Underground station.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 7: SOCIAL LINKS ══ -->
+<section class="section section--small" id="social" style="background: var(--cream);" aria-labelledby="social-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Stay Connected</div>
+      <h2 class="section-title" id="social-title">Follow Our Journey</h2>
+    </div>
+    <div class="social-links-grid stagger-children" style="margin-top: var(--space-8);">
+      <a href="#" class="social-link-card social-link-card--instagram" aria-label="Follow on Instagram">
+        <div class="social-link-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <div><div class="social-link-card__name">Instagram</div><div class="social-link-card__handle">@lumierehome · 142K followers</div></div>
+      </a>
+      <a href="#" class="social-link-card social-link-card--pinterest" aria-label="Follow on Pinterest">
+        <div class="social-link-card__icon" style="background: #E60023; border-radius: var(--radius-lg);">
+          <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.65 1.97-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.08.54 1.96 1.6 1.96 1.92 0 3.4-2.02 3.4-4.94 0-2.58-1.86-4.39-4.51-4.39-3.07 0-4.87 2.3-4.87 4.68 0 .93.36 1.92.8 2.46a.32.32 0 0 1 .07.31c-.08.34-.27 1.08-.3 1.23-.05.2-.16.24-.38.15-1.42-.66-2.3-2.74-2.3-4.41 0-3.59 2.61-6.89 7.53-6.89 3.96 0 7.03 2.82 7.03 6.59 0 3.93-2.48 7.09-5.92 7.09-1.16 0-2.25-.6-2.62-1.31l-.71 2.65c-.26.98-.95 2.21-1.42 2.96.5.15 1.03.23 1.57.23 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+        </div>
+        <div><div class="social-link-card__name">Pinterest</div><div class="social-link-card__handle">@lumierehome · 89K saves</div></div>
+      </a>
+      <a href="#" class="social-link-card social-link-card--facebook" aria-label="Follow on Facebook">
+        <div class="social-link-card__icon" style="background: #1877F2; border-radius: var(--radius-lg);">
+          <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </div>
+        <div><div class="social-link-card__name">Facebook</div><div class="social-link-card__handle">Lumière Home · 67K likes</div></div>
+      </a>
+      <a href="#" class="social-link-card social-link-card--houzz" aria-label="Follow on Houzz">
+        <div class="social-link-card__icon" style="background: #4db74d; border-radius: var(--radius-lg);">
+          <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M9 3L3 9v12h6V15h6v6h6V9L15 3z"/><path d="M9 9h6" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/></svg>
+        </div>
+        <div><div class="social-link-card__name">Houzz</div><div class="social-link-card__handle">Lumière Home · 12K followers</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 8: FINAL CTA ══ -->
+<section class="section" id="contact-cta" style="background: linear-gradient(160deg, var(--walnut-dark), var(--walnut), var(--bronze-dark));" aria-labelledby="contact-cta-title">
+  <div class="container">
+    <div class="reveal" style="text-align: center; max-width: 640px; margin: 0 auto;">
+      <div class="section-label section-label--center" style="color: var(--bronze-light);">We're Here for You</div>
+      <h2 class="section-title text-center" id="contact-cta-title" style="color: var(--warm-white);">Ready to Transform Your Home?</h2>
+      <p style="color: rgba(250,248,245,0.7); font-size: var(--fs-lg); max-width: 48ch; margin: 0 auto var(--space-10);">
+        Start your journey to a more beautiful home today — our team is just a message or phone call away.
+      </p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+442079460000" class="btn btn--bronze btn--lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.61-.61a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Us Now
+        </a>
+        <a href="mailto:hello@lumierehome.com" class="btn btn--ghost btn--lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo"><div class="footer__logo-mark">L</div><div class="footer__logo-name">Lumière <span>Home</span></div></div>
+        <p>Where timeless craftsmanship meets modern luxury since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Visit Us</h5><ul class="footer__links"><li><a href="#map">Showroom Location</a></li><li><a href="#hours">Opening Hours</a></li><li><a href="#book-visit">Book Appointment</a></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Legal</h5><ul class="footer__links"><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      <div class="footer__col"><h5>Newsletter</h5><form class="newsletter-form" novalidate><input type="email" placeholder="Your email" aria-label="Email" /><button type="submit" aria-label="Subscribe">→</button></form></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <div class="footer__legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<div class="toast-container" aria-live="polite"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+/* ── Contact Form Submission ── */
+document.getElementById('contact-form-el')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (typeof validateForm !== 'function' || !validateForm(this)) return;
+  const btn = document.getElementById('contact-submit');
+  const txt = document.getElementById('submit-text');
+  btn.disabled = true;
+  txt.textContent = 'Sending…';
+  setTimeout(() => {
+    btn.disabled = false;
+    txt.textContent = 'Send Enquiry';
+    this.reset();
+    if (typeof showToast === 'function') showToast('<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg>' + ' Your enquiry has been sent! We\'ll be in touch within 24 hours.', 'success', 5000);
+  }, 1800);
+});
+
+/* ── Visit Form Submission ── */
+document.getElementById('visit-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (typeof validateForm !== 'function' || !validateForm(this)) return;
+  this.reset();
+  if (typeof showToast === 'function') showToast('<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' + ' Appointment request received! Confirmation email incoming.', 'success', 5000);
+});
+
+/* ── Min date for visit booking ── */
+const dateInput = document.getElementById('vf-date');
+if (dateInput) {
+  const today = new Date();
+  today.setDate(today.getDate() + 1);
+  dateInput.min = today.toISOString().split('T')[0];
+}
+</script>
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

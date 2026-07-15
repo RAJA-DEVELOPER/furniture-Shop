@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Home Sitemap — Browse all pages on the Lumière Home website." />
+  <title>Sitemap — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--space-6);
+    }
+
+    .sitemap-group {
+      background: var(--warm-white);
+      border: 1px solid var(--sand);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      transition: all var(--transition-base);
+    }
+
+    .sitemap-group:hover {
+      border-color: var(--bronze);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .sitemap-group__title {
+      font-family: var(--font-serif);
+      font-size: var(--fs-lg);
+      font-weight: 700;
+      color: var(--walnut);
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--sand);
+    }
+
+    .sitemap-group__links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .sitemap-group__links a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-md);
+      color: var(--charcoal-soft);
+      font-size: var(--fs-sm);
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+
+    .sitemap-group__links a:hover {
+      background: rgba(176,141,87,0.08);
+      color: var(--bronze);
+      transform: translateX(4px);
+    }
+
+    .sitemap-group__links a svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      opacity: 0.4;
+    }
+  </style>
+<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar__logo"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text">Lumière <span>Home</span></span></a>
+      <ul class="navbar__menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar__icons">
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+<nav class="navbar__mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span></div>
+  <ul class="mobile-nav-links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+
+<main id="main">
+
+<!-- ══ HERO ══ -->
+<section class="page-hero" aria-labelledby="sitemap-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/hero-living-room.png" alt="" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <h1 class="page-hero__title" id="sitemap-hero-title">Sitemap</h1>
+      <p class="page-hero__subtitle">Explore all pages on the Lumière Home website</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SITEMAP CONTENT ══ -->
+<section class="section" aria-labelledby="sitemap-content-title">
+  <div class="container">
+    <div class="sitemap-grid">
+
+      <div class="sitemap-group">
+        <h3 class="sitemap-group__title">Main Pages</h3>
+        <ul class="sitemap-group__links">
+          <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+          <li><a href="home2.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home2</a></li>
+          <li><a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About Us</a></li>
+          <li><a href="services.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="m15 11-3 3-3-3"/><path d="M12 14V4"/></svg> Services</a></li>
+          <li><a href="gallery.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg> Gallery</a></li>
+          <li><a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-group">
+        <h3 class="sitemap-group__title">Account</h3>
+        <ul class="sitemap-group__links">
+          <li><a href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Sign In</a></li>
+          <li><a href="signup.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg> Create Account</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-group">
+        <h3 class="sitemap-group__title">Legal</h3>
+        <ul class="sitemap-group__links">
+          <li><a href="terms.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Terms of Service</a></li>
+          <li><a href="privacy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Privacy Policy</a></li>
+          <li><a href="sitemap.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-group">
+        <h3 class="sitemap-group__title">Collections</h3>
+        <ul class="sitemap-group__links">
+          <li><a href="gallery.html#living">Living Room</a></li>
+          <li><a href="gallery.html#bedroom">Bedroom</a></li>
+          <li><a href="gallery.html#dining">Dining Room</a></li>
+          <li><a href="gallery.html#kitchen">Kitchen</a></li>
+          <li><a href="gallery.html#office">Office</a></li>
+          <li><a href="gallery.html#outdoor">Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-group">
+        <h3 class="sitemap-group__title">Services</h3>
+        <ul class="sitemap-group__links">
+          <li><a href="services.html#consultation">Interior Consultation</a></li>
+          <li><a href="services.html#custom">Custom Furniture</a></li>
+          <li><a href="services.html#styling">Home Styling</a></li>
+          <li><a href="services.html#delivery">Delivery & Installation</a></li>
+          <li><a href="services.html#warranty">Warranty</a></li>
+          <li><a href="services.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-group">
+        <h3 class="sitemap-group__title">About</h3>
+        <ul class="sitemap-group__links">
+          <li><a href="about.html#story">Brand Story</a></li>
+          <li><a href="about.html#designers">Our Designers</a></li>
+          <li><a href="about.html#sustainability">Sustainability</a></li>
+          <li><a href="about.html#awards">Awards</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo"><div class="footer__logo-mark">L</div><div class="footer__logo-name">Lumière <span>Home</span></div></div>
+        <p>Where timeless craftsmanship meets modern luxury since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Company</h5><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Legal</h5><ul class="footer__links"><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      <div class="footer__col"><h5>Newsletter</h5><form class="newsletter-form" novalidate><input type="email" placeholder="Your email" aria-label="Email" /><button type="submit" aria-label="Subscribe">→</button></form></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Lumi&egrave;re Home. All rights reserved.</p>
+      <div class="footer__legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<div class="toast-container" aria-live="polite"></div>
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

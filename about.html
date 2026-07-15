@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Lumière Home — Our brand story, craftsmanship heritage, award-winning designers, and commitment to sustainability since 2009." />
+  <title>About Us — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar__logo">
+        <div class="navbar__logo-mark">L</div>
+        <span class="navbar__logo-text">Lumière <span>Home</span></span>
+      </a>
+      <ul class="navbar__menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar__icons">
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+<nav class="navbar__mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span></div>
+  <ul class="mobile-nav-links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="mobile-menu-footer"><a href="contact.html" class="btn btn--primary btn--sm">Book a Visit</a></div>
+</nav>
+
+<main id="main">
+
+<!-- ══ SECTION 1: HERO ══ -->
+<section class="page-hero" aria-labelledby="about-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <div class="page-hero__label page-hero__label--center">Est. 2009</div>
+      <h1 class="page-hero__title" id="about-hero-title">A Legacy of Exceptional <em>Design</em></h1>
+      <p class="page-hero__subtitle">We believe every home deserves to be beautiful. For over fifteen years, we've been crafting furniture and spaces that inspire.</p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#story" class="btn btn--primary btn--lg">Our Story</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg">Meet the Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: BRAND STORY ══ -->
+<section class="section" id="story" aria-labelledby="story-title">
+  <div class="container">
+    <div class="story-layout">
+      <div class="story-image reveal-left">
+        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <div class="story-years">
+          <div class="story-years__num">15+</div>
+          <div class="story-years__label">Years of Excellence</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-label">Our Journey</div>
+        <h2 class="section-title" id="story-title">Where It All Began</h2>
+        <div class="divider"></div>
+        <p style="margin-bottom: var(--space-5);">Lumière Home was founded in 2009 by interior designer Elena Beaumont in a small London workshop. What began as a bespoke furniture atelier has grown into an internationally recognised luxury brand with showrooms across three continents.</p>
+        <p style="margin-bottom: var(--space-5);">Our philosophy has always been simple: create furniture that doesn't just fill a room, but transforms it. Every piece we craft tells a story — of the forest it came from, the hands that shaped it, and the life it will become part of.</p>
+        <p style="margin-bottom: var(--space-8);">Today, Lumière Home employs over 200 craftspeople, designers, and interior consultants, united by a shared passion for extraordinary furniture and exceptional living spaces.</p>
+        <a href="services.html" class="btn btn--primary">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: STATS (CRAFTSMANSHIP) ══ -->
+<section class="stats-section section--small" id="craftsmanship" aria-labelledby="craft-title">
+  <div class="container">
+    <h2 class="section-title text-center" id="craft-title" style="color: var(--warm-white); margin-bottom: var(--space-12); display: none;">Craftsmanship</h2>
+    <div class="stats-grid">
+      <div class="stat-item reveal delay-1">
+        <div class="stat-item__num"><span data-counter="1200" data-suffix="+">0+</span></div>
+        <div class="stat-item__label">Pieces Crafted Annually</div>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <div class="stat-item__num"><span data-counter="200" data-suffix="+">0+</span></div>
+        <div class="stat-item__label">Master Craftspeople</div>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <div class="stat-item__num"><span data-counter="28">0</span></div>
+        <div class="stat-item__label">Countries We Serve</div>
+      </div>
+      <div class="stat-item reveal delay-4">
+        <div class="stat-item__num"><span data-counter="98" data-suffix="%">0%</span></div>
+        <div class="stat-item__label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: DESIGNERS ══ -->
+<section class="section" id="designers" aria-labelledby="designers-title" style="background: var(--cream);">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">The Creative Minds</div>
+      <h2 class="section-title" id="designers-title">Our Designers</h2>
+      <p class="section-subtitle">Meet the visionary team behind every piece — a diverse group of internationally trained designers who share a passion for extraordinary living.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal delay-1">
+        <div class="team-card__photo">
+          <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+          </div>
+          <div class="team-card__socials">
+            <a href="#" style="color: white; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+          </div>
+        <div class="team-card__name">Elena Beaumont</div>
+        <div class="team-card__role">Founder & Creative Director</div>
+      </div>
+      <div class="team-card reveal delay-2">
+        <div class="team-card__photo">
+          <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+          </div>
+          <div class="team-card__socials">
+            <a href="#" style="color: white; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+          </div>
+        <div class="team-card__name">Marco Ricci</div>
+        <div class="team-card__role">Head of Furniture Design</div>
+      </div>
+      <div class="team-card reveal delay-3">
+        <div class="team-card__photo">
+          <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+          </div>
+          <div class="team-card__socials">
+            <a href="#" style="color: white; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+          </div>
+        <div class="team-card__name">Yuki Tanaka</div>
+        <div class="team-card__role">Interior Design Lead</div>
+      </div>
+      <div class="team-card reveal delay-4">
+        <div class="team-card__photo">
+          <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+          </div>
+          <div class="team-card__socials">
+            <a href="#" style="color: white; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+          </div>
+        <div class="team-card__name">Amara Osei</div>
+        <div class="team-card__role">Materials & Sustainability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: WHY CHOOSE US ══ -->
+<section class="section features-why" id="why-us" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Our Promise</div>
+      <h2 class="section-title" id="why-title">Why Choose Lumière?</h2>
+    </div>
+    <div class="features-grid-why">
+      <div class="feature-why-card reveal delay-1">
+        <div class="feature-why-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M6 5h12v3c0 3-2 6-6 6s-6-3-6-6V5Z"/><path d="M6 5V3h12v2"/><path d="M12 14v3"/><path d="M9 20h6"/></svg></div>
+        <h3 class="feature-why-title">Award-Winning Design</h3>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); line-height: 1.8;">Recipients of the Elle Décor Grand Prix, Wallpaper Design Award, and 12 other international design honours.</p>
+      </div>
+      <div class="feature-why-card reveal delay-2">
+        <div class="feature-why-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 3v17"/><path d="M5 12c0-3 3-6 7-6s7 3 7 6"/><path d="M5 12s-3-2-1-5c2-3 5 0 5 0"/><path d="M19 12s3-2 1-5c-2-3-5 0-5 0"/><circle cx="12" cy="8" r="2" fill="currentColor"/></svg></div>
+        <h3 class="feature-why-title">Sustainably Sourced</h3>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); line-height: 1.8;">100% FSC-certified wood, recycled metals, and natural fabrics. Committed to carbon neutrality by 2028.</p>
+      </div>
+      <div class="feature-why-card reveal delay-3">
+        <div class="feature-why-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M14 10L4 20"/><path d="M15 9l4-4a1 1 0 0 1 1.4 0l.6.6a1 1 0 0 1 0 1.4l-4 4"/><path d="M10 14l-2 2"/></svg></div>
+        <h3 class="feature-why-title">Master Craftsmanship</h3>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); line-height: 1.8;">Every piece is hand-finished by artisans with decades of experience in traditional woodworking and upholstery.</p>
+      </div>
+      <div class="feature-why-card reveal delay-1">
+        <div class="feature-why-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg></div>
+        <h3 class="feature-why-title">Bespoke Options</h3>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); line-height: 1.8;">Custom dimensions, materials, and finishes available on any piece. Your vision, perfectly realised.</p>
+      </div>
+      <div class="feature-why-card reveal delay-2">
+        <div class="feature-why-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><rect x="1" y="9" width="15" height="8" rx="2"/><circle cx="5" cy="17" r="2" fill="currentColor"/><circle cx="14" cy="17" r="2" fill="currentColor"/><path d="M16 11h3l3 3v3h-2"/></svg></div>
+        <h3 class="feature-why-title">White-Glove Delivery</h3>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); line-height: 1.8;">Professional installation by our trained team. We don't leave until everything is placed to perfection.</p>
+      </div>
+      <div class="feature-why-card reveal delay-3">
+        <div class="feature-why-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="feature-why-title">Lifetime Guarantee</h3>
+        <p style="font-size: var(--fs-sm); color: var(--charcoal-soft); line-height: 1.8;">Every structural component is covered by a 10-year warranty. Our upholstery and finishes guaranteed for 5 years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: SUSTAINABILITY ══ -->
+<section class="section" id="sustainability" aria-labelledby="sustain-title">
+  <div class="container">
+    <div class="sustainability-layout">
+      <div class="reveal-left">
+        <div class="section-label">Our Mission</div>
+        <h2 class="section-title" id="sustain-title">Committed to a Greener Future</h2>
+        <div class="divider"></div>
+        <p style="margin-bottom: var(--space-6);">At Lumière Home, sustainability is not an afterthought — it's woven into every decision we make, from material sourcing to final delivery. We believe luxury and responsibility can coexist beautifully.</p>
+        <p style="margin-bottom: var(--space-8);">Our 2030 Sustainability Pledge commits us to net-zero carbon operations, 100% renewable energy in our workshops, and a closed-loop manufacturing process that creates zero waste.</p>
+        <div class="sustainability-pillars">
+          <div class="sustainability-pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 2 6 10h3v5h6v-5h3Z"/><path d="M10 15v5"/><path d="M14 15v5"/></svg></div><div class="pillar-title">FSC Certified</div><div class="pillar-desc">All hardwoods from certified sustainable forests</div></div>
+          <div class="sustainability-pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M7.5 3.5 12 2l4.5 1.5"/><path d="M12 2v6"/><path d="M3.5 7.5 2 12l1.5 4.5"/><path d="M2 12h6"/><path d="M20.5 7.5 22 12l-1.5 4.5"/><path d="M22 12h-6"/><path d="M7.5 20.5 12 22l4.5-1.5"/><path d="M12 22v-6"/></svg></div><div class="pillar-title">Zero Waste</div><div class="pillar-desc">All offcuts repurposed or composted</div></div>
+          <div class="sustainability-pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><div class="pillar-title">Solar Powered</div><div class="pillar-desc">85% renewable energy in our workshops</div></div>
+          <div class="sustainability-pillar"><div class="pillar-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 10c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div><div class="pillar-title">Water Neutral</div><div class="pillar-desc">Closed-loop water system since 2022</div></div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div style="border-radius: var(--radius-2xl); overflow: hidden; height: 520px;">
+          <img src="images/bedroom-interior.png" alt="Sustainable craftsmanship" class="img-real" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 7: AWARDS ══ -->
+<section class="section awards-section" id="awards" aria-labelledby="awards-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal" style="color: var(--warm-white);">
+      <div class="section-label section-label--center" style="color: var(--bronze-light);">Recognition</div>
+      <h2 class="section-title" id="awards-title" style="color: var(--warm-white);">Awards & Accolades</h2>
+      <p class="section-subtitle" style="color: rgba(234,219,200,0.6); margin: 0 auto;">Recognised by the world's leading design institutions for excellence in furniture and interior design.</p>
+    </div>
+    <div class="awards-strip stagger-children" style="margin-top: var(--space-10);">
+      <div class="award-badge">
+        <div class="award-badge__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M6 5h12v3c0 3-2 6-6 6s-6-3-6-6V5Z"/><path d="M6 5V3h12v2"/><path d="M12 14v3"/><path d="M9 20h6"/></svg></div>
+        <div><div class="award-badge__year">2025</div><div class="award-badge__name">Elle Décor Grand Prix</div></div>
+      </div>
+      <div class="award-badge">
+        <div class="award-badge__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div><div class="award-badge__year">2024</div><div class="award-badge__name">Wallpaper Design Award</div></div>
+      </div>
+      <div class="award-badge">
+        <div class="award-badge__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg></div>
+        <div><div class="award-badge__year">2024</div><div class="award-badge__name">Reddot Design Award</div></div>
+      </div>
+      <div class="award-badge">
+        <div class="award-badge__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg></div>
+        <div><div class="award-badge__year">2023</div><div class="award-badge__name">FX International Award</div></div>
+      </div>
+      <div class="award-badge">
+        <div class="award-badge__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 2 2 9l10 13L22 9Z"/><path d="M2 9h20"/><path d="M12 22V9"/></svg></div>
+        <div><div class="award-badge__year">2023</div><div class="award-badge__name">Homes & Gardens Best Buy</div></div>
+      </div>
+      <div class="award-badge">
+        <div class="award-badge__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div><div class="award-badge__year">2022</div><div class="award-badge__name">Green Furniture Award</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 8: CTA ══ -->
+<section class="cta-section section" id="about-cta" aria-labelledby="about-cta-title">
+  <div class="container">
+    <div class="reveal" style="max-width: 640px; margin: 0 auto; text-align: center;">
+      <div class="section-label section-label--center">Start Your Journey</div>
+      <h2 class="section-title text-center" id="about-cta-title">Let's Create Something Beautiful Together</h2>
+      <p class="section-subtitle text-center" style="margin: 0 auto var(--space-8);">Whether you're furnishing a single room or an entire home, our design team is here to help every step of the way.</p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn--primary btn--lg">Book Consultation</a>
+        <a href="services.html" class="btn btn--secondary btn--lg">View Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo"><div class="footer__logo-mark">L</div><div class="footer__logo-name">Lumière <span>Home</span></div></div>
+        <p>Where timeless craftsmanship meets modern luxury since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Collections</h5><ul class="footer__links"><li><a href="gallery.html#living">Living Room</a></li><li><a href="gallery.html#bedroom">Bedroom</a></li><li><a href="gallery.html#dining">Dining</a></li><li><a href="gallery.html#office">Office</a></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Legal</h5><ul class="footer__links"><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      <div class="footer__col"><h5>Newsletter</h5><form class="newsletter-form" novalidate><input type="email" placeholder="Your email" aria-label="Email" /><button type="submit" aria-label="Subscribe">→</button></form></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <div class="footer__legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<div class="toast-container" aria-live="polite"></div>
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

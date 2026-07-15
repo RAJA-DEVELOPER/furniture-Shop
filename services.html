@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Home Services — Interior Consultation, Custom Furniture, Home Styling, Delivery & Installation, Material Guide, Warranty, and more." />
+  <title>Services — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="index.html" class="navbar__logo"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text">Lumière <span>Home</span></span></a>
+      <ul class="navbar__menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar__icons">
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+<nav class="navbar__mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;"><div class="navbar__logo-mark">L</div><span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span></div>
+  <ul class="mobile-nav-links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+
+<main id="main">
+
+<!-- ══ SECTION 1: HERO ══ -->
+<section class="page-hero" aria-labelledby="services-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/hero-living-room.png" alt="Luxury Living Room" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <div class="page-hero__label page-hero__label--center">Premium Services</div>
+      <h1 class="page-hero__title" id="services-hero-title">Exceptional Service, <em>Every Step</em></h1>
+      <p class="page-hero__subtitle">From your first design consultation to final installation — we're with you throughout your entire journey to a beautiful home.</p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn--bronze btn--lg">Book Consultation</a>
+        <a href="#faq" class="btn btn--ghost btn--lg">View FAQ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: INTERIOR CONSULTATION ══ -->
+<section class="section" id="consultation" aria-labelledby="consult-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Service 01</div>
+      <h2 class="section-title" id="consult-title">Interior Design Consultation</h2>
+      <p class="section-subtitle">Work one-on-one with an award-winning designer to plan your perfect space — in-showroom, at-home, or virtually.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal delay-1">
+        <div class="service-card__img">
+          <img src="images/hero-living-room.png" alt="In-Showroom Design Consultation" class="img-real" loading="lazy" />
+        </div>
+        <div class="service-card__body">
+          <div class="service-card__num">01 / CONSULTATION</div>
+          <h3 class="service-card__title">In-Showroom Session</h3>
+          <p class="service-card__desc">Visit our 5,000 sq ft showroom and work with a designer surrounded by our full collection. Bring your measurements and we'll handle the rest.</p>
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4);">
+            <span class="badge badge--bronze">2 hours</span>
+            <span class="badge badge--walnut">Complimentary</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="service-card__img">
+          <img src="images/bedroom-interior.png" alt="Home Visit Service" class="img-real" loading="lazy" />
+        </div>
+        <div class="service-card__body">
+          <div class="service-card__num">01 / CONSULTATION</div>
+          <h3 class="service-card__title">Home Visit</h3>
+          <p class="service-card__desc">Our designer comes to your home, assesses the space, takes measurements, and provides a comprehensive design proposal.</p>
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4);">
+            <span class="badge badge--bronze">3–4 hours</span>
+            <span class="badge badge--walnut">From £195</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal delay-3">
+        <div class="service-card__img">
+          <img src="images/home-office.png" alt="Virtual Consultation" class="img-real" loading="lazy" />
+        </div>
+        <div class="service-card__body">
+          <div class="service-card__num">01 / CONSULTATION</div>
+          <h3 class="service-card__title">Virtual Consultation</h3>
+          <p class="service-card__desc">Connect with our design team from anywhere in the world. Share your space photos and we'll create a detailed mood board and proposal.</p>
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4);">
+            <span class="badge badge--bronze">1 hour</span>
+            <span class="badge badge--walnut">£95</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: CUSTOM FURNITURE ══ -->
+<section class="section" id="custom" style="background: var(--sand-light);" aria-labelledby="custom-title">
+  <div class="container">
+    <div class="grid grid-2" style="gap: var(--space-16); align-items: center;">
+      <div class="reveal-left">
+        <div class="section-label">Service 02</div>
+        <h2 class="section-title" id="custom-title">Custom Furniture</h2>
+        <div class="divider"></div>
+        <p style="margin-bottom: var(--space-5);">When our existing collection doesn't quite fit your vision or space, our bespoke workshop creates furniture to your exact specifications.</p>
+        <p style="margin-bottom: var(--space-6);">Choose your dimensions, select from 40+ material options, and work with our craftspeople to realise a truly one-of-a-kind piece.</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-8);">
+          <li style="display: flex; align-items: center; gap: var(--space-3); font-size: var(--fs-sm);">
+            <span style="width: 24px; height: 24px; background: var(--bronze); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; flex-shrink: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Custom dimensions and configurations
+          </li>
+          <li style="display: flex; align-items: center; gap: var(--space-3); font-size: var(--fs-sm);">
+            <span style="width: 24px; height: 24px; background: var(--bronze); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; flex-shrink: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            40+ premium material selections
+          </li>
+          <li style="display: flex; align-items: center; gap: var(--space-3); font-size: var(--fs-sm);">
+            <span style="width: 24px; height: 24px; background: var(--bronze); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; flex-shrink: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Lead time: 8–14 weeks
+          </li>
+          <li style="display: flex; align-items: center; gap: var(--space-3); font-size: var(--fs-sm);">
+            <span style="width: 24px; height: 24px; background: var(--bronze); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; flex-shrink: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Signed certificate of authenticity
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Start Custom Order</a>
+      </div>
+      <div class="reveal-right">
+        <div class="custom-furniture-image">
+          <img src="images/dining-room.png" alt="Custom Furniture Crafting" class="img-real" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: HOME STYLING ══ -->
+<section class="section" id="styling" aria-labelledby="styling-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Service 03</div>
+      <h2 class="section-title" id="styling-title">Home Styling</h2>
+      <p class="section-subtitle">Complete room transformations by our interior styling team — from concept and floor plan to the final decorative touches.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal delay-1">
+        <div class="service-card__img"><img src="images/hero-living-room.png" alt="Room Refresh Styling" class="img-real" loading="lazy" /></div>
+        <div class="service-card__body">
+          <div class="service-card__num">03 / STYLING</div>
+          <h3 class="service-card__title">Room Refresh</h3>
+          <p class="service-card__desc">A focused styling session for a single room. Perfect for updating a living room, bedroom, or dining space with a curated look.</p>
+        </div>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="service-card__img"><img src="images/bedroom-interior.png" alt="Home Visit Service" class="img-real" loading="lazy" /></div>
+        <div class="service-card__body">
+          <div class="service-card__num">03 / STYLING</div>
+          <h3 class="service-card__title">Full Home Package</h3>
+          <p class="service-card__desc">End-to-end styling for your entire home. Our team handles everything from floor plans and furniture selection to art curation and accessories.</p>
+        </div>
+      </div>
+      <div class="service-card reveal delay-3">
+        <div class="service-card__img"><img src="images/home-office.png" alt="Seasonal Restyling" class="img-real" loading="lazy" /></div>
+        <div class="service-card__body">
+          <div class="service-card__num">03 / STYLING</div>
+          <h3 class="service-card__title">Seasonal Restyling</h3>
+          <p class="service-card__desc">Refresh your home for the new season with updated textiles, accessories, and decorative elements — keeping your space feeling current and alive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: DELIVERY & INSTALLATION ══ -->
+<section class="section" id="delivery" style="background: var(--charcoal);" aria-labelledby="delivery-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center" style="color: var(--bronze-light);">Service 04</div>
+      <h2 class="section-title" id="delivery-title" style="color: var(--warm-white);">Delivery & Installation</h2>
+      <p class="section-subtitle" style="color: rgba(234,219,200,0.6); margin: 0 auto;">White-glove delivery by our trained installation team — we don't leave until everything is perfect.</p>
+    </div>
+    <div class="grid grid-4 stagger-children" style="gap: var(--space-5); margin-top: var(--space-10);">
+      <div style="text-align: center; padding: var(--space-6); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); transition: all var(--transition-base);" class="hover-lift">
+        <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; margin: 0 auto var(--space-4);"><img src="images/product-sofa.png" alt="Packaging" style="width: 100%; height: 100%; object-fit: cover;" /></div>
+        <div style="font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--warm-white); margin-bottom: var(--space-3);">Protective Packaging</div>
+        <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5);">Every piece is custom-packed to prevent any damage in transit.</p>
+      </div>
+      <div style="text-align: center; padding: var(--space-6); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); transition: all var(--transition-base);" class="hover-lift">
+        <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; margin: 0 auto var(--space-4);"><img src="images/hero-living-room.png" alt="Delivery" style="width: 100%; height: 100%; object-fit: cover;" /></div>
+        <div style="font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--warm-white); margin-bottom: var(--space-3);">Scheduled Delivery</div>
+        <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5);">Choose your preferred delivery date and 2-hour arrival window.</p>
+      </div>
+      <div style="text-align: center; padding: var(--space-6); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); transition: all var(--transition-base);" class="hover-lift">
+        <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; margin: 0 auto var(--space-4);"><img src="images/home-office.png" alt="Assembly" style="width: 100%; height: 100%; object-fit: cover;" /></div>
+        <div style="font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--warm-white); margin-bottom: var(--space-3);">Professional Assembly</div>
+        <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5);">Our certified team assembles and positions every piece precisely.</p>
+      </div>
+      <div style="text-align: center; padding: var(--space-6); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); transition: all var(--transition-base);" class="hover-lift">
+        <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; margin: 0 auto var(--space-4);"><img src="images/dining-room.png" alt="Clean up" style="width: 100%; height: 100%; object-fit: cover;" /></div>
+        <div style="font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--warm-white); margin-bottom: var(--space-3);">Clean & Clear</div>
+        <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5);">We remove all packaging and leave your home spotless.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: MATERIAL GUIDE ══ -->
+<section class="section" id="materials" aria-labelledby="material-guide-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Service 05</div>
+      <h2 class="section-title" id="material-guide-title">Material Guide</h2>
+      <p class="section-subtitle">Explore our premium materials — each selected for its beauty, durability, and sustainability credentials.</p>
+    </div>
+    <div class="material-guide-grid">
+      <div class="material-guide-card reveal delay-1">
+        <div class="material-guide-card__img"><img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" /></div>
+        <div class="material-guide-card__body">
+          <div class="material-guide-card__name">Walnut</div>
+          <div class="material-guide-card__props">Rich • Durable • Timeless</div>
+        </div>
+      </div>
+      <div class="material-guide-card reveal delay-2">
+        <div class="material-guide-card__img"><img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" /></div>
+        <div class="material-guide-card__body">
+          <div class="material-guide-card__name">White Oak</div>
+          <div class="material-guide-card__props">Light • Modern • Sustainable</div>
+        </div>
+      </div>
+      <div class="material-guide-card reveal delay-3">
+        <div class="material-guide-card__img"><img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" /></div>
+        <div class="material-guide-card__body">
+          <div class="material-guide-card__name">Italian Marble</div>
+          <div class="material-guide-card__props">Luxurious • Cool • Elegant</div>
+        </div>
+      </div>
+      <div class="material-guide-card reveal delay-4">
+        <div class="material-guide-card__img"><img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" /></div>
+        <div class="material-guide-card__body">
+          <div class="material-guide-card__name">Full-Grain Leather</div>
+          <div class="material-guide-card__props">Supple • Ages Beautifully</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 7: WARRANTY ══ -->
+<section class="section warranty-section" id="warranty" aria-labelledby="warranty-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Our Guarantee</div>
+      <h2 class="section-title" id="warranty-title">Warranty & Care</h2>
+      <p class="section-subtitle">Every Lumière piece is an investment. We stand behind our craftsmanship with comprehensive warranty protection.</p>
+    </div>
+    <div class="warranty-grid">
+      <div class="warranty-item reveal delay-1">
+        <div class="warranty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M4 2h16v20H4z"/><path d="M8 6h8"/><path d="M8 10h8"/><path d="M8 14h8"/><path d="M8 18h8"/><path d="M10 22v-4"/><path d="M14 22v-4"/></svg></div>
+        <div class="warranty-years"><span data-counter="10">0</span></div>
+        <div style="font-size: var(--fs-sm); color: var(--bronze); font-weight: 700; margin: var(--space-1) 0;">Years</div>
+        <div class="warranty-label">Structural Warranty — Frame, joints, and support systems</div>
+      </div>
+      <div class="warranty-item reveal delay-2">
+        <div class="warranty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M4 12V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5"/><path d="M2 14v4h20v-4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M4 18v2"/><path d="M20 18v2"/></svg></div>
+        <div class="warranty-years"><span data-counter="5">0</span></div>
+        <div style="font-size: var(--fs-sm); color: var(--bronze); font-weight: 700; margin: var(--space-1) 0;">Years</div>
+        <div class="warranty-label">Upholstery Warranty — Fabric, leather, and foam</div>
+      </div>
+      <div class="warranty-item reveal delay-3">
+        <div class="warranty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><circle cx="13.5" cy="6.5" r="2.5" stroke="none" fill="currentColor"/><circle cx="6" cy="13" r="2" stroke="none" fill="currentColor"/><circle cx="18" cy="16" r="2" stroke="none" fill="currentColor"/><path d="M16 4a4 4 0 0 0-8 0v4a4 4 0 0 0 8 0V4Z"/><path d="M4 16a5 5 0 0 0 10 0v-2"/><path d="M8 14v2a4 4 0 0 0 8 0"/></svg></div>
+        <div class="warranty-years"><span data-counter="3">0</span></div>
+        <div style="font-size: var(--fs-sm); color: var(--bronze); font-weight: 700; margin: var(--space-1) 0;">Years</div>
+        <div class="warranty-label">Finish Warranty — Lacquers, oils, and surface treatments</div>
+      </div>
+      <div class="warranty-item reveal delay-4">
+        <div class="warranty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 12c-2-2.5-4-4-6-4-3 0-5 2.5-5 5s2 5 5 5c2 0 4-1.5 6-4 2 2.5 4 4 6 4 3 0 5-2.5 5-5s-2-5-5-5c-2 0-4 1.5-6 4Z"/></svg></div>
+        <div class="warranty-years" style="font-size: var(--fs-3xl);">∞</div>
+        <div style="font-size: var(--fs-sm); color: var(--bronze); font-weight: 700; margin: var(--space-1) 0;">Always</div>
+        <div class="warranty-label">Care Support — Expert advice and repair referrals for life</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 8: FAQ ══ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container container--narrow">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Got Questions?</div>
+      <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="accordion reveal">
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-question">How long does a custom furniture order take?</span>
+          <span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="accordion-body"><p class="accordion-answer">Custom orders typically take 8–14 weeks from deposit payment. This includes design finalisation, material sourcing, crafting, finishing, and quality inspection. We'll provide a specific timeline during your consultation.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-question">Do you offer international delivery?</span>
+          <span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="accordion-body"><p class="accordion-answer">Yes! We deliver to over 28 countries worldwide. International orders require custom shipping arrangements and timelines. Contact us for a personalised quote. We partner with specialist fine art and furniture logistics companies.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-question">Can I see fabric and material samples before ordering?</span>
+          <span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="accordion-body"><p class="accordion-answer">Absolutely. We send complimentary sample swatches of any fabric, leather, or wood finish to your home. Our material libraryhas over 400 options. You can also experience all materials in person at our showroom.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-question">Is the interior design consultation truly complimentary?</span>
+          <span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="accordion-body"><p class="accordion-answer">In-showroom consultations are complimentary with no minimum purchase. Home visits and virtual consultations have a nominal fee of £95–£195, which is credited against any order over £1,000.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-question">What is your return and exchange policy?</span>
+          <span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="accordion-body"><p class="accordion-answer">In-stock items may be returned within 14 days in original condition. Custom orders cannot be returned but we guarantee complete satisfaction — if there's a defect, we'll repair or replace at no cost. We're proud to say our defect rate is under 0.5%.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-question">Do you work with interior designers and trade professionals?</span>
+          <span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="accordion-body"><p class="accordion-answer">Yes, we have a dedicated Trade Programme offering 15–25% discount for registered interior designers, architects, and property developers. Contact our trade team at trade@lumierehome.com for more details.</p></div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: var(--space-10);">
+      <p style="margin-bottom: var(--space-4);">Still have questions? Our team is happy to help.</p>
+      <a href="contact.html" class="btn btn--primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo"><div class="footer__logo-mark">L</div><div class="footer__logo-name">Lumière <span>Home</span></div></div>
+        <p>Where timeless craftsmanship meets modern luxury since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul class="footer__links"><li><a href="#consultation">Consultation</a></li><li><a href="#custom">Custom Furniture</a></li><li><a href="#styling">Home Styling</a></li><li><a href="#delivery">Delivery</a></li><li><a href="#warranty">Warranty</a></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="home2.html">Home2</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Legal</h5><ul class="footer__links"><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      <div class="footer__col"><h5>Newsletter</h5><form class="newsletter-form" novalidate><input type="email" placeholder="Your email" aria-label="Email" /><button type="submit" aria-label="Subscribe">→</button></form></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <div class="footer__legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.html">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<div class="toast-container" aria-live="polite"></div>
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

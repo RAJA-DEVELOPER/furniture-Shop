@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Home — Luxury Furniture & Interior Design. Discover premium collections for every room. Crafted for the discerning home." />
+  <meta name="keywords" content="luxury furniture, home decor, interior design, premium furniture, living room, bedroom furniture" />
+  <meta property="og:title" content="Lumière Home — Luxury Furniture & Décor" />
+  <meta property="og:description" content="Premium furniture collections crafted with exceptional materials and design." />
+  <title>Lumière Home — Luxury Furniture & Interior Design</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════ -->
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo" aria-label="Lumière Home">
+        <div class="navbar__logo-mark">L</div>
+        <span class="navbar__logo-text">Lumière <span>Home</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="navbar__menu" role="list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="home2.html" class="nav-link">Home2</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Icons -->
+      <div class="navbar__icons">
+
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+
+<!-- Mobile Menu -->
+<nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;">
+    <div class="navbar__logo-mark">L</div>
+    <span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="signup.html">Sign Up</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <p>Visit our showroom Mon–Sat 10am–7pm</p>
+    <a href="contact.html" class="btn btn--primary btn--sm">Book a Visit</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+   SECTION 1: HERO
+══════════════════════════════════════════ -->
+<main id="main">
+<section class="page-hero" aria-labelledby="home-hero-title">
+  <div class="page-hero__bg">
+    <img src="images/hero-living-room.png" alt="Lumière Home" class="img-real" />
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content reveal">
+      <div class="page-hero__label page-hero__label--center">New Collection 2026</div>
+      <h1 class="page-hero__title" id="home-hero-title">Where <em>Elegance</em> Meets Home</h1>
+      <p class="page-hero__subtitle">Handcrafted furniture and curated décor pieces that transform every space into a sanctuary of refined living.</p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="home2.html" class="btn btn--bronze btn--lg">Explore Collections</a>
+        <a href="about.html" class="btn btn--ghost btn--lg">Our Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 2: FEATURED COLLECTIONS
+══════════════════════════════════════════ -->
+<section class="section" id="collections" aria-labelledby="collections-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Our Collections</div>
+      <h2 class="section-title" id="collections-title">Curated for Your <em>Lifestyle</em></h2>
+      <p class="section-subtitle">Each piece tells a story of craftsmanship, quality, and timeless design — handpicked for the modern home.</p>
+    </div>
+
+    <div class="collections-grid">
+      <!-- Card 1 — Large -->
+      <div class="collection-card collection-card--large reveal delay-1" data-lightbox data-caption="The Milano Lounge Collection">
+        <div class="collection-card__img zoom-container">
+          <img src="images/hero-living-room.png" alt="Milano Lounge Collection" class="img-real" />
+        </div>
+        <div class="collection-card__content">
+          <div class="collection-card__tag">Living Room</div>
+          <div class="collection-card__title">Milano Lounge Collection</div>
+          <div class="collection-card__subtitle">32 pieces • From $1,299</div>
+        </div>
+        <div class="collection-card__arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="collection-card reveal delay-2" data-lightbox data-caption="Kyoto Bedroom Suite">
+        <div class="collection-card__img zoom-container" style="height: 280px;">
+          <img src="images/bedroom-interior.png" alt="Kyoto Bedroom Suite" class="img-real" style="height:280px;" />
+        </div>
+        <div class="collection-card__content">
+          <div class="collection-card__tag">Bedroom</div>
+          <div class="collection-card__title">Kyoto Bedroom Suite</div>
+          <div class="collection-card__subtitle">18 pieces • From $2,150</div>
+        </div>
+        <div class="collection-card__arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="collection-card reveal delay-3" data-lightbox data-caption="Scandinavian Dining Set">
+        <div class="collection-card__img zoom-container" style="height: 280px;">
+          <img src="images/dining-room.png" alt="Scandinavian Dining Set" class="img-real" style="height:280px;" />
+        </div>
+        <div class="collection-card__content">
+          <div class="collection-card__tag">Dining</div>
+          <div class="collection-card__title">Scandinavian Dining Set</div>
+          <div class="collection-card__subtitle">12 pieces • From $899</div>
+        </div>
+        <div class="collection-card__arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="collection-card reveal delay-4" data-lightbox data-caption="Executive Office Collection">
+        <div class="collection-card__img zoom-container" style="height: 280px;">
+          <img src="images/home-office.png" alt="Executive Office Collection" class="img-real" style="height:280px;" />
+        </div>
+        <div class="collection-card__content">
+          <div class="collection-card__tag">Office</div>
+          <div class="collection-card__title">Executive Office Collection</div>
+          <div class="collection-card__subtitle">24 pieces • From $650</div>
+        </div>
+        <div class="collection-card__arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top: var(--space-10);">
+      <a href="gallery.html" class="btn btn--primary btn--lg">View All Collections</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 3: SHOP BY ROOM
+══════════════════════════════════════════ -->
+<section class="section rooms-section" id="rooms" aria-labelledby="rooms-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Browse by Space</div>
+      <h2 class="section-title" id="rooms-title">Shop By Room</h2>
+      <p class="section-subtitle">Find the perfect furniture for every corner of your home, designed to complement your unique style.</p>
+    </div>
+
+    <div class="room-grid stagger-children">
+      <a href="gallery.html#living" class="room-card" id="room-living">
+        <div class="room-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="room-card__name">Living Room</div>
+        <div class="room-card__count">128 products</div>
+      </a>
+      <a href="gallery.html#bedroom" class="room-card" id="room-bedroom">
+        <div class="room-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="room-card__name">Bedroom</div>
+        <div class="room-card__count">94 products</div>
+      </a>
+      <a href="gallery.html#dining" class="room-card" id="room-dining">
+        <div class="room-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="room-card__name">Dining Room</div>
+        <div class="room-card__count">67 products</div>
+      </a>
+      <a href="gallery.html#kitchen" class="room-card" id="room-kitchen">
+        <div class="room-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="room-card__name">Kitchen</div>
+        <div class="room-card__count">45 products</div>
+      </a>
+      <a href="gallery.html#office" class="room-card" id="room-office">
+        <div class="room-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="room-card__name">Office</div>
+        <div class="room-card__count">82 products</div>
+      </a>
+      <a href="gallery.html#outdoor" class="room-card" id="room-outdoor">
+        <div class="room-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="room-card__name">Outdoor</div>
+        <div class="room-card__count">53 products</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 4: BEST SELLERS
+══════════════════════════════════════════ -->
+<section class="section" id="bestsellers" aria-labelledby="bestsellers-title">
+  <div class="container">
+    <div class="flex-between reveal" style="margin-bottom: var(--space-8);">
+      <div>
+        <div class="section-label">Top Picks</div>
+        <h2 class="section-title" id="bestsellers-title">Best Sellers</h2>
+      </div>
+      <a href="gallery.html" class="btn btn--secondary" style="flex-shrink: 0;">View All</a>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="bestsellers-tabs reveal" role="tablist" aria-label="Product categories">
+      <button class="tab-btn active" data-tab="all" role="tab" aria-selected="true">All</button>
+      <button class="tab-btn" data-tab="living" role="tab" aria-selected="false">Living Room</button>
+      <button class="tab-btn" data-tab="bedroom" role="tab" aria-selected="false">Bedroom</button>
+      <button class="tab-btn" data-tab="dining" role="tab" aria-selected="false">Dining</button>
+      <button class="tab-btn" data-tab="office" role="tab" aria-selected="false">Office</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="products-grid">
+      <!-- Product 1 -->
+      <article class="product-card reveal delay-1" data-tab-cat="living" id="product-1">
+        <div class="product-card__image">
+          <img src="images/product-sofa.png" alt="Velvet Comfort Sofa - Walnut frame" class="img-real" loading="lazy" />
+          <div class="product-card__badges">
+            <span class="badge badge--new">New</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="action-btn" aria-label="Quick view" data-modal="product-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <div class="product-card__quick-view" data-modal="product-1">Quick View</div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Living Room</div>
+          <h3 class="product-card__name">Velvet Comfort Sofa</h3>
+          <div class="product-card__meta">Walnut frame • Midnight Velvet</div>
+          <div class="stars" aria-label="4.8 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">
+              <span class="price-current">$2,499</span>
+              <span class="price-original">$3,100</span>
+            </div>
+            <a href="contact.html" class="btn btn--primary btn--sm">Enquire</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card reveal delay-2" data-tab-cat="bedroom" id="product-2">
+        <div class="product-card__image">
+          <img src="images/bedroom-interior.png" alt="Osaka Platform Bed" class="img-real" loading="lazy" />
+          <div class="product-card__badges">
+            <span class="badge badge--sale">−20%</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="action-btn" aria-label="Quick view" data-modal="product-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <div class="product-card__quick-view" data-modal="product-2">Quick View</div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Bedroom</div>
+          <h3 class="product-card__name">Osaka Platform Bed</h3>
+          <div class="product-card__meta">White Oak • King Size</div>
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">
+              <span class="price-current">$1,899</span>
+              <span class="price-original">$2,349</span>
+            </div>
+            <a href="contact.html" class="btn btn--primary btn--sm">Enquire</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card reveal delay-3" data-tab-cat="dining" id="product-3">
+        <div class="product-card__image">
+          <img src="images/dining-room.png" alt="Florence Dining Table" class="img-real" loading="lazy" />
+          <div class="product-card__badges">
+            <span class="badge badge--bronze">Featured</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="action-btn" aria-label="Quick view" data-modal="product-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <div class="product-card__quick-view" data-modal="product-3">Quick View</div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Dining Room</div>
+          <h3 class="product-card__name">Florence Dining Table</h3>
+          <div class="product-card__meta">Solid Walnut • 8-seater</div>
+          <div class="stars" aria-label="4.9 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">
+              <span class="price-current">$3,299</span>
+            </div>
+            <a href="contact.html" class="btn btn--primary btn--sm">Enquire</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card reveal delay-4" data-tab-cat="office" id="product-4">
+        <div class="product-card__image">
+          <img src="images/home-office.png" alt="Brentwood Executive Desk" class="img-real" loading="lazy" />
+          <div class="product-card__actions">
+            <button class="action-btn" aria-label="Quick view" data-modal="product-4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <div class="product-card__quick-view" data-modal="product-4">Quick View</div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Office</div>
+          <h3 class="product-card__name">Brentwood Executive Desk</h3>
+          <div class="product-card__meta">Dark Walnut • 180cm Wide</div>
+          <div class="stars" aria-label="4.7 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">
+              <span class="price-current">$1,750</span>
+            </div>
+            <a href="contact.html" class="btn btn--primary btn--sm">Enquire</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 5: MATERIAL & FINISH
+══════════════════════════════════════════ -->
+<section class="section materials-section" id="materials" aria-labelledby="materials-title">
+  <div class="container">
+    <div class="materials-layout">
+      <!-- Visual -->
+      <div class="materials-visual reveal-left">
+        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+      </div>
+
+      <!-- Content -->
+      <div class="materials-content reveal-right">
+        <div class="section-label">Craftsmanship</div>
+        <h2 class="section-title" id="materials-title">Premium Materials & Finishes</h2>
+        <p class="section-subtitle" style="color: rgba(234,219,200,0.6);">
+          Every piece is crafted with carefully sourced materials — from sustainably harvested hardwoods to hand-woven fabrics and burnished metals.
+        </p>
+
+        <div class="material-swatches">
+          <div class="material-swatch active" data-material="walnut" id="swatch-walnut">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #7A5548, #3E2B22);"></div>
+            <div class="swatch-name">Walnut</div>
+          </div>
+          <div class="material-swatch" data-material="oak" id="swatch-oak">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #D4B896, #A0826D);"></div>
+            <div class="swatch-name">White Oak</div>
+          </div>
+          <div class="material-swatch" data-material="marble" id="swatch-marble">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #F0EDE8, #C8C2B8); background-image: linear-gradient(145deg, #F0EDE8, #C8C2B8);"></div>
+            <div class="swatch-name">Marble</div>
+          </div>
+          <div class="material-swatch" data-material="brass" id="swatch-brass">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #D4A843, #8A6B38);"></div>
+            <div class="swatch-name">Brass</div>
+          </div>
+          <div class="material-swatch" data-material="leather" id="swatch-leather">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #8B6B55, #5A3E30);"></div>
+            <div class="swatch-name">Leather</div>
+          </div>
+          <div class="material-swatch" data-material="velvet" id="swatch-velvet">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #6B5B8A, #3D3358);"></div>
+            <div class="swatch-name">Velvet</div>
+          </div>
+          <div class="material-swatch" data-material="linen" id="swatch-linen">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #E8DCC8, #C4B49A);"></div>
+            <div class="swatch-name">Linen</div>
+          </div>
+          <div class="material-swatch" data-material="rattan" id="swatch-rattan">
+            <div class="swatch-circle" style="background: radial-gradient(circle at 40% 40%, #C4A46A, #8A6B38);"></div>
+            <div class="swatch-name">Rattan</div>
+          </div>
+        </div>
+
+        <div class="material-features">
+          <div class="material-feature">
+            <div class="material-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 3v17"/><path d="M5 12c0-3 3-6 7-6s7 3 7 6"/><path d="M5 12s-3-2-1-5c2-3 5 0 5 0"/><path d="M19 12s3-2 1-5c-2-3-5 0-5 0"/><circle cx="12" cy="8" r="2" fill="currentColor"/></svg></div>
+            <div>
+              <div class="material-feature__title">Sustainably Sourced</div>
+              <div class="material-feature__desc">FSC-certified hardwoods from managed forests</div>
+            </div>
+          </div>
+          <div class="material-feature">
+            <div class="material-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M14 10L4 20"/><path d="M15 9l4-4a1 1 0 0 1 1.4 0l.6.6a1 1 0 0 1 0 1.4l-4 4"/><path d="M10 14l-2 2"/></svg></div>
+            <div>
+              <div class="material-feature__title">Artisan Crafted</div>
+              <div class="material-feature__desc">Traditional joinery techniques for lasting durability</div>
+            </div>
+          </div>
+          <div class="material-feature">
+            <div class="material-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%"><path d="M12 2C13 5 14 7 16 8c-2 1-3 3-4 6-1-3-2-5-4-6 2-1 3-3 4-6"/><line x1="18" y1="14" x2="18" y2="20"/><line x1="15" y1="17" x2="21" y2="17"/></svg></div>
+            <div>
+              <div class="material-feature__title">Premium Finishes</div>
+              <div class="material-feature__desc">Hand-rubbed oils and protective coatings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 6: INTERIOR INSPIRATION
+══════════════════════════════════════════ -->
+<section class="section" id="inspiration" aria-labelledby="inspiration-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Interior Stories</div>
+      <h2 class="section-title" id="inspiration-title">Design Inspiration</h2>
+      <p class="section-subtitle">Real homes styled by our interior design team — every space tells a unique story of comfort and beauty.</p>
+    </div>
+
+    <div class="inspiration-grid">
+      <!-- Feature -->
+      <div class="inspiration-feature zoom-container reveal-left" data-lightbox data-caption="Modern Minimalist Living Room">
+        <img src="images/hero-living-room.png" alt="Modern Minimalist Living Room" class="img-real" style="border-radius: var(--radius-2xl);" loading="lazy" />
+        <div class="overlay overlay--bottom"></div>
+        <div class="inspiration-feature__info">
+          <div class="collection-card__tag">Featured Project</div>
+          <div class="collection-card__title" style="font-size: var(--fs-xl);">Modern Minimalist Living Room</div>
+          <div class="collection-card__subtitle">Hampstead, London — 2026</div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="inspiration-sidebar reveal-right">
+        <div class="inspiration-card zoom-container" data-lightbox data-caption="Nordic Bedroom Retreat">
+          <img src="images/bedroom-interior.png" alt="Nordic Bedroom Retreat" class="img-real" style="height: 150px; object-fit: cover;" loading="lazy" />
+          <div class="overlay overlay--bottom"></div>
+          <div class="inspiration-card__info">
+            <div class="inspiration-card__tag">Bedroom</div>
+            <div class="inspiration-card__name">Nordic Retreat</div>
+          </div>
+        </div>
+        <div class="inspiration-card zoom-container" data-lightbox data-caption="Warm Dining Experience">
+          <img src="images/dining-room.png" alt="Warm Dining Experience" class="img-real" style="height: 150px; object-fit: cover;" loading="lazy" />
+          <div class="overlay overlay--bottom"></div>
+          <div class="inspiration-card__info">
+            <div class="inspiration-card__tag">Dining</div>
+            <div class="inspiration-card__name">Warm Gatherings</div>
+          </div>
+        </div>
+        <div class="inspiration-card zoom-container" data-lightbox data-caption="Executive Home Office">
+          <img src="images/home-office.png" alt="Executive Home Office" class="img-real" style="height: 150px; object-fit: cover;" loading="lazy" />
+          <div class="overlay overlay--bottom"></div>
+          <div class="inspiration-card__info">
+            <div class="inspiration-card__tag">Office</div>
+            <div class="inspiration-card__name">Executive Workspace</div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="card" style="padding: var(--space-6);">
+          <div class="grid grid-3" style="gap: var(--space-4); text-align: center;">
+            <div>
+              <div style="font-family: var(--font-serif); font-size: var(--fs-2xl); font-weight: 700; color: var(--walnut);">
+                <span data-counter="850" data-suffix="+">0+</span>
+              </div>
+              <div style="font-size: var(--fs-xs); color: var(--charcoal-soft); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">Projects</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-serif); font-size: var(--fs-2xl); font-weight: 700; color: var(--walnut);">
+                <span data-counter="15" data-suffix="yrs">0yrs</span>
+              </div>
+              <div style="font-size: var(--fs-xs); color: var(--charcoal-soft); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">Experience</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-serif); font-size: var(--fs-2xl); font-weight: 700; color: var(--walnut);">
+                <span data-counter="98" data-suffix="%">0%</span>
+              </div>
+              <div style="font-size: var(--fs-xs); color: var(--charcoal-soft); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 7: CUSTOMER REVIEWS
+══════════════════════════════════════════ -->
+<section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Testimonials</div>
+      <h2 class="section-title" id="reviews-title">What Our Clients Say</h2>
+      <div class="divider divider--center"></div>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card reveal delay-1">
+        <div class="review-card__quote">"</div>
+        <p class="review-card__text">
+          Lumière transformed our home completely. The Milano sofa is absolutely breathtaking — the craftsmanship is unlike anything we'd seen in any other store. Truly world-class.
+        </p>
+        <div class="stars" style="margin-bottom: var(--space-4);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="review-card__author">
+          <div class="review-card__avatar">S</div>
+          <div>
+            <div class="review-card__name">Sophia Marchetti</div>
+            <div class="review-card__location">Interior Designer, London</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card reveal delay-2">
+        <div class="review-card__quote">"</div>
+        <p class="review-card__text">
+          The design consultation service is exceptional. Our designer understood exactly what we wanted and delivered a bedroom suite that exceeded our every expectation.
+        </p>
+        <div class="stars" style="margin-bottom: var(--space-4);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="review-card__author">
+          <div class="review-card__avatar">J</div>
+          <div>
+            <div class="review-card__name">James Whitfield</div>
+            <div class="review-card__location">Architect, New York</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card reveal delay-3">
+        <div class="review-card__quote">"</div>
+        <p class="review-card__text">
+          I've furnished three homes through Lumière over the past decade. The quality simply doesn't diminish with time — the walnut dining table we bought in 2018 still looks brand new.
+        </p>
+        <div class="stars" style="margin-bottom: var(--space-4);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="review-card__author">
+          <div class="review-card__avatar">E</div>
+          <div>
+            <div class="review-card__name">Elena Vasquez</div>
+            <div class="review-card__location">Entrepreneur, Dubai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   SECTION 8: VISIT SHOWROOM CTA
+══════════════════════════════════════════ -->
+<section class="showroom-cta section" id="showroom" aria-labelledby="showroom-title">
+  <div class="showroom-cta__bg"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="showroom-cta__content reveal">
+      <div class="section-label section-label--center" style="color: var(--bronze-light); justify-content: center;">Experience Lumière</div>
+      <h2 class="showroom-cta__title" id="showroom-title">Visit Our Flagship Showroom</h2>
+      <p class="showroom-cta__subtitle">
+        Immerse yourself in 5,000 sq ft of curated luxury. Touch the fabrics, feel the craftsmanship, and let our design consultants guide you.
+      </p>
+      <div class="showroom-hours">
+        <div class="showroom-hour">
+          <div class="showroom-hour__day">Monday–Friday</div>
+          <div class="showroom-hour__time">10:00 – 19:00</div>
+        </div>
+        <div class="showroom-hour">
+          <div class="showroom-hour__day">Saturday</div>
+          <div class="showroom-hour__time">10:00 – 18:00</div>
+        </div>
+        <div class="showroom-hour">
+          <div class="showroom-hour__day">Sunday</div>
+          <div class="showroom-hour__time">12:00 – 17:00</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn--bronze btn--lg">Book Your Visit</a>
+        <a href="contact.html#map" class="btn btn--ghost btn--lg">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════════════════════════════════
+   QUICK VIEW MODAL
+══════════════════════════════════════════ -->
+<div class="modal-overlay" id="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal__header">
+      <div class="modal__category" id="modal-category">Living Room</div>
+      <button class="modal__close" id="modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal__body">
+      <div class="modal__gallery">
+        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+      </div>
+      <div class="modal__info">
+        <h3 class="modal__title" id="modal-title">Velvet Comfort Sofa</h3>
+        <div class="modal__rating">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" opacity="0.4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span style="font-size: var(--fs-sm); color: var(--charcoal-soft);">4.8 (142 reviews)</span>
+        </div>
+        <div class="modal__price" id="modal-price">$2,499</div>
+        <p class="modal__desc" id="modal-desc">
+          A masterpiece of comfort and elegance. Hand-tufted in midnight velvet with a solid walnut frame, this sofa brings warmth and sophistication to any living space.
+        </p>
+        <div class="modal__specs" id="modal-specs">
+          <div class="modal__spec">
+            <span class="modal__spec-label">Dimensions</span>
+            <span class="modal__spec-value">240 × 95 × 85 cm</span>
+          </div>
+          <div class="modal__spec">
+            <span class="modal__spec-label">Material</span>
+            <span class="modal__spec-value">Solid Walnut + Velvet</span>
+          </div>
+          <div class="modal__spec">
+            <span class="modal__spec-label">Lead Time</span>
+            <span class="modal__spec-value">6–8 weeks</span>
+          </div>
+          <div class="modal__spec">
+            <span class="modal__spec-label">Warranty</span>
+            <span class="modal__spec-value">10 Years</span>
+          </div>
+        </div>
+        <div class="modal__actions">
+          <a href="contact.html" class="btn btn--primary">Send Enquiry</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-mark">L</div>
+          <div class="footer__logo-name">Lumière <span>Home</span></div>
+        </div>
+        <p>Where timeless craftsmanship meets modern luxury. Creating beautiful spaces for discerning homes since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.65 1.97-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.08.54 1.96 1.6 1.96 1.92 0 3.4-2.02 3.4-4.94 0-2.58-1.86-4.39-4.51-4.39-3.07 0-4.87 2.3-4.87 4.68 0 .93.36 1.92.8 2.46a.32.32 0 0 1 .07.31c-.08.34-.27 1.08-.3 1.23-.05.2-.16.24-.38.15-1.42-.66-2.3-2.74-2.3-4.41 0-3.59 2.61-6.89 7.53-6.89 3.96 0 7.03 2.82 7.03 6.59 0 3.93-2.48 7.09-5.92 7.09-1.16 0-2.25-.6-2.62-1.31l-.71 2.65c-.26.98-.95 2.21-1.42 2.96.5.15 1.03.23 1.57.23 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Houzz">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L3 9v12h6V15h6v6h6V9L15 3z"/><path d="M9 9h6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h5>Collections</h5>
+        <ul class="footer__links">
+          <li><a href="gallery.html#living">Living Room</a></li>
+          <li><a href="gallery.html#bedroom">Bedroom</a></li>
+          <li><a href="gallery.html#dining">Dining Room</a></li>
+          <li><a href="gallery.html#kitchen">Kitchen</a></li>
+          <li><a href="gallery.html#office">Office</a></li>
+          <li><a href="gallery.html#outdoor">Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Stay Inspired</h5>
+        <div class="footer__newsletter">
+          <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5); margin-bottom: var(--space-3);">
+            Join 25,000+ design lovers for monthly inspiration.
+          </p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+        <div style="margin-top: var(--space-6);">
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="currentColor"/></svg> 14 Kensington High St, London</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +44 20 7946 0000</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> hello@lumierehome.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+   LIGHTBOX (gallery.js injects this)
+══════════════════════════════════════════ -->
+<style>
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+.lightbox-overlay.open { opacity: 1; visibility: visible; }
+.lightbox-container {
+  position: relative;
+  width: min(800px, 92vw);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.lightbox-content { flex: 1; }
+.lightbox-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-xl);
+  background: var(--sand);
+  transition: background 0.4s ease;
+}
+.lightbox-caption {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: var(--fs-sm);
+  margin-top: var(--space-4);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+.lightbox-close {
+  position: absolute;
+  top: -52px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.lightbox-close:hover { background: var(--bronze); }
+.lightbox-prev, .lightbox-next {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.lightbox-prev:hover, .lightbox-next:hover { background: var(--bronze); }
+</style>
+
+<!-- ══════════════════════════════════════════
+   BACK TO TOP
+══════════════════════════════════════════ -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<!-- Toast container -->
+<div class="toast-container" aria-live="polite"></div>
+
+<!-- ══════════════════════════════════════════
+   SCRIPTS
+══════════════════════════════════════════ -->
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+
+<script src="js/gallery.js"></script>
+<script>
+/* ── Product tab filtering ── */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    const filter = btn.dataset.tab;
+    document.querySelectorAll('.product-card').forEach(card => {
+      const cat = card.dataset.tabCat;
+      const show = filter === 'all' || cat === filter;
+      card.style.display = show ? '' : 'none';
+      if (show) card.style.animation = 'scaleIn 0.4s ease forwards';
+    });
+  });
+});
+
+/* ── Material swatch switcher ── */
+document.querySelectorAll('.material-swatch').forEach(swatch => {
+  swatch.addEventListener('click', () => {
+    document.querySelectorAll('.material-swatch').forEach(s => s.classList.remove('active'));
+    swatch.classList.add('active');
+    if (typeof showToast === 'function') {
+      showToast(`Material: ${swatch.dataset.material.charAt(0).toUpperCase() + swatch.dataset.material.slice(1)}`, 'default', 2000);
+    }
+  });
+});
+
+/* ── Quick-view modal ── */
+const productData = {
+  'product-1': {
+    title: 'Velvet Comfort Sofa', price: '$2,499', category: 'Living Room',
+    bg: 'linear-gradient(145deg, #5C4033 0%, #8A6B38 40%, #EADBC8 100%)',
+    desc: 'Hand-tufted in midnight velvet with a solid walnut frame. This sofa brings warmth and sophistication to any living space.',
+  },
+  'product-2': {
+    title: 'Osaka Platform Bed', price: '$1,899', category: 'Bedroom',
+    bg: 'linear-gradient(135deg, #6B705C 0%, #8A9078 40%, #F5EEE4 100%)',
+    desc: 'Inspired by Japanese minimalism, the Osaka bed features clean lines, a low profile, and precision-crafted white oak joinery.',
+  },
+  'product-3': {
+    title: 'Florence Dining Table', price: '$3,299', category: 'Dining Room',
+    bg: 'linear-gradient(135deg, #B08D57 0%, #C9A97A 40%, #EADBC8 100%)',
+    desc: 'A statement dining table crafted from a single slab of solid walnut. Seats 8 guests with room to spare.',
+  },
+  'product-4': {
+    title: 'Brentwood Executive Desk', price: '$1,750', category: 'Office',
+    bg: 'linear-gradient(135deg, #2C2C2C 0%, #5C4033 50%, #8A9078 100%)',
+    desc: 'The desk of discerning professionals. Dark walnut veneer with built-in cable management and leather inlay.',
+  },
+};
+
+const modal = document.getElementById('quick-view-modal');
+const modalClose = document.getElementById('modal-close');
+
+document.querySelectorAll('[data-modal]').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const id = trigger.dataset.modal;
+    const data = productData[id];
+    if (!data) return;
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-price').textContent = data.price;
+    document.getElementById('modal-category').textContent = data.category;
+    document.getElementById('modal-desc').textContent = data.desc;
+    document.getElementById('modal-image').style.background = data.bg;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+modalClose?.addEventListener('click', () => {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+});
+
+modal?.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+
+/* ── Theme Toggle ── */
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>
