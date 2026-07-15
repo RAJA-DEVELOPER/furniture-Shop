@@ -5,9 +5,28 @@
 [dir="rtl"] {
   direction: rtl;
   text-align: start;
+  background-color: var(--bg-body);
+}
+
+/* Move overflow handling from html to body in RTL to avoid Chrome scroll position bug */
+html[dir="rtl"] {
+  overflow-x: visible;
+}
+
+[dir="rtl"] body {
+  width: 100%;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* ── Navbar ── */
+[dir="rtl"] .navbar {
+  left: 0;
+  right: 0;
+}
+[dir="rtl"] .navbar__inner {
+  overflow: hidden;
+}
 
 /* ── Mobile menu ── */
 [dir="rtl"] .navbar__mobile-menu {
