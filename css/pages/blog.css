@@ -360,6 +360,7 @@
   font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--bronze);
+  text-decoration: none;
   transition: all var(--transition-base);
 }
 

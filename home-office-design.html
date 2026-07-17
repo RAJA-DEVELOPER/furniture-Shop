@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover how to design a home office that boosts creativity — from ergonomics and lighting to colour psychology and biophilic design." />
+  <meta property="og:title" content="Designing a Home Office That Boosts Creativity — Lumière Home" />
+  <meta property="og:description" content="Remote work is here to stay. Learn how to create a workspace that inspires productivity and creativity every day." />
+  <title>Designing a Home Office That Boosts Creativity — Lumière Home</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/pages.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+  <style>
+.article-hero { padding: var(--space-12) 0 var(--space-8); }
+.article-hero .section-label { margin-bottom: var(--space-4); }
+.article-hero h1 { font-family: var(--font-serif); font-size: var(--fs-4xl); font-weight: 700; line-height: 1.2; margin-bottom: var(--space-4); }
+.article-meta { display: flex; gap: var(--space-4); align-items: center; font-size: var(--fs-sm); color: var(--charcoal-soft); margin-bottom: var(--space-6); }
+.article-featured-img { width: 100%; border-radius: var(--radius-2xl); margin-bottom: var(--space-10); aspect-ratio: 16/9; object-fit: cover; }
+.article-body { max-width: 720px; margin: 0 auto; }
+.article-body p { font-size: var(--fs-md); line-height: 1.8; color: var(--charcoal); margin-bottom: var(--space-5); }
+.article-body h2 { font-family: var(--font-serif); font-size: var(--fs-2xl); margin-top: var(--space-10); margin-bottom: var(--space-4); color: var(--charcoal); }
+.article-body h3 { font-family: var(--font-serif); font-size: var(--fs-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--charcoal); }
+.article-back { text-align: center; margin-top: var(--space-12); margin-bottom: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--sand); }
+@media (max-width:768px){.article-hero h1{font-size:var(--fs-2xl)}.article-body p{font-size:var(--fs-base)}.article-body h2{font-size:var(--fs-xl)}.article-body h3{font-size:var(--fs-lg)}.article-meta{flex-wrap:wrap;gap:var(--space-2)}}
+@media (max-width:480px){.article-hero{padding:var(--space-8) 0 var(--space-6)}.article-hero h1{font-size:var(--fs-xl)}.article-featured-img{border-radius:var(--radius-lg);margin-bottom:var(--space-6)}.article-body h2{font-size:var(--fs-lg)}}
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════ -->
+<header class="navbar navbar--opaque" role="banner">
+  <div class="container">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo" aria-label="Lumière Home">
+        <div class="navbar__logo-mark">L</div>
+        <span class="navbar__logo-text">Lumière <span>Home</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="navbar__menu" role="list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="home2.html" class="nav-link">Home2</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link active">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Icons -->
+      <div class="navbar__icons">
+
+        <a href="login.html" class="navbar__icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="navbar__icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="menu-overlay"></div>
+
+<!-- Mobile Menu -->
+<nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="navbar__logo" style="margin-bottom: 2rem;">
+    <div class="navbar__logo-mark">L</div>
+    <span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <p>Visit our showroom Mon–Sat 10am–7pm</p>
+    <a href="contact.html" class="btn btn--primary btn--sm">Book a Visit</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-body">
+        <div class="section-label">Trends</div>
+        <h1>Designing a Home Office That Boosts Creativity</h1>
+        <div class="article-meta">
+          <span>Jun 10, 2026</span>
+          <span>&middot;</span>
+          <span>10 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <img src="images/home-office.png" alt="Home office with desk, chair and natural light" class="article-featured-img" loading="lazy" />
+  </div>
+
+  <!-- Article Body -->
+  <section class="article-body">
+    <div class="container">
+      <p>Remote work is no longer a passing trend — it has become a permanent fixture in how we approach our professional lives. With millions of people now working from home full-time or in hybrid arrangements, the quality of your home office space directly affects your productivity, creativity, and overall well-being. A well-designed home office does more than just look good; it actively inspires you to do your best work every day.</p>
+
+      <p>Whether you are a writer, designer, entrepreneur, or remote executive, the environment you create around your work matters. Studies have shown that thoughtfully designed workspaces can boost productivity by up to 20% and significantly reduce stress levels. In this guide, we walk through the essential elements of a home office designed to spark creativity and sustain focus.</p>
+
+      <h2>Ergonomics: The Foundation of a Productive Workspace</h2>
+
+      <p>Before aesthetics comes comfort. An ergonomic workspace prevents fatigue, reduces strain, and allows you to maintain deep focus for longer periods. The three pillars of office ergonomics are your chair, your desk, and your monitor placement.</p>
+
+      <h3>Chair Height and Support</h3>
+      <p>Invest in a chair that supports the natural curve of your spine. Your feet should rest flat on the floor, knees at a 90-degree angle, and your thighs parallel to the ground. The armrests should sit just below your shoulders so your arms can rest comfortably while typing. Look for adjustable lumbar support and breathable mesh or premium leather upholstery.</p>
+
+      <h3>Desk Positioning</h3>
+      <p>Your desk should allow your elbows to rest at a 90-degree angle when typing, with your wrists straight and relaxed. A sit-stand desk offers the flexibility to alternate between sitting and standing throughout the day — a practice linked to improved circulation and mental alertness. Position your desk so that you face into the room rather than a wall, creating a sense of openness rather than confinement.</p>
+
+      <h3>Monitor Placement</h3>
+      <p>The top of your monitor should be at or slightly below eye level, roughly an arm's length away. This prevents neck strain and reduces eye fatigue. If you use a laptop, invest in a riser and a separate keyboard and mouse to maintain proper posture.</p>
+
+      <h2>Lighting: Shaping Mood and Focus</h2>
+
+      <p>Lighting is one of the most underrated elements of office design. The right lighting reduces eye strain, regulates your circadian rhythm, and can dramatically influence your energy levels throughout the day.</p>
+
+      <h3>Natural Light Positioning</h3>
+      <p>Position your desk perpendicular to windows rather than facing them directly to avoid glare on your screen. North-facing windows provide consistent, diffused light ideal for screen work, while south-facing light offers warmth that can boost mood. If possible, place your workspace in the room that receives the most daylight.</p>
+
+      <h3>Task Lighting</h3>
+      <p>Supplement natural light with adjustable task lighting. An architect lamp with a warm LED bulb (2700–3000K) provides focused light for reading and detailed work without washing out the room. Angle it to illuminate your work surface without casting shadows on your screen.</p>
+
+      <h3>Ambient Lighting</h3>
+      <p>Avoid harsh overhead fluorescent lights. Instead, use layered ambient lighting — floor lamps, wall sconces, or indirect cove lighting — to create a warm, inviting glow. Dimmable options allow you to adjust brightness as the day progresses, easing the transition from focused work to relaxation.</p>
+
+      <h2>Colour Psychology: Paint for Productivity</h2>
+
+      <p>Colour has a profound effect on the brain's cognitive function and emotional state. Choosing the right palette for your home office can help you enter a flow state more quickly and sustain concentration for longer.</p>
+
+      <p><strong>Blues for Focus.</strong> Blue tones — particularly soft navy, slate, and periwinkle — have been shown to lower heart rate and promote calm, focused thinking. They are ideal for analytical roles such as accounting, programming, and research.</p>
+
+      <p><strong>Greens for Calm.</strong> Sage, olive, and moss greens evoke feelings of balance and renewal. Green is the most restful colour for the eyes and works beautifully in creative spaces where calm, sustained attention is needed.</p>
+
+      <p><strong>Warm Accents for Energy.</strong> Mustard yellow, terracotta, and burnt orange add warmth and optimism to a workspace. Use them sparingly — through artwork, cushions, or a feature wall — to inject energy without overwhelming the senses.</p>
+
+      <p>Neutral backdrops in warm white, beige, or light grey allow these accent colours to shine while keeping the room feeling airy and uncluttered.</p>
+
+      <h2>Storage Solutions: Organised Mind, Organised Space</h2>
+
+      <p>Clutter competes for your brain's attention. A tidy workspace reduces cognitive load and makes it easier to focus on the task at hand. Smart storage solutions keep essentials within reach while maintaining a clean, minimalist aesthetic.</p>
+
+      <h3>Floating Shelves</h3>
+      <p>Floating shelves free up floor space and provide a place for books, plants, and decorative objects. Install them above your desk or along adjacent walls to keep reference materials accessible without crowding your work surface.</p>
+
+      <h3>Cabinet Systems</h3>
+      <p>Modular cabinet systems in walnut or oak offer concealed storage for files, stationery, and office supplies. Choose pieces with clean lines and integrated handles to maintain a streamlined look. A credenza behind your desk can double as a storage unit and a surface for a printer or decorative lamp.</p>
+
+      <h3>Cable Management</h3>
+      <p>Nothing disrupts a clean workspace like a tangle of cables. Use cable trays, clips, and sleeves to route cords out of sight. A desk with built-in cable management channels keeps power strips and adapters hidden. Wireless peripherals further reduce visual clutter.</p>
+
+      <h2>Biophilic Design: Bringing Nature Indoors</h2>
+
+      <p>Biophilic design — the practice of connecting interior spaces with nature — has been shown to reduce stress, improve mood, and enhance cognitive function. Incorporating natural elements into your home office can transform it from a sterile workspace into a vibrant, living environment.</p>
+
+      <h3>Plants</h3>
+      <p>Houseplants such as snake plants, pothos, and peace lilies are low-maintenance and improve indoor air quality. Place a large potted plant in a corner to soften hard lines, or cluster smaller plants on a shelf or windowsill. Living walls and terrariums are excellent options for larger spaces.</p>
+
+      <h3>Natural Materials</h3>
+      <p>Incorporate wood, stone, bamboo, and linen through your furniture, flooring, and textiles. A solid walnut desk, a jute rug, or linen curtains add texture and warmth that synthetic materials cannot replicate. These materials age beautifully and bring a sense of authenticity to your space.</p>
+
+      <h3>Views of Nature</h3>
+      <p>If you are lucky enough to have a window overlooking greenery, position your desk to make the most of it. If not, nature photography, botanical prints, or even a digital screensaver of a forest scene can provide a similar psychological benefit.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Your home office should be a reflection of how you work best — not a compromise you settle for. By combining ergonomic principles with thoughtful lighting, intentional colour choices, organised storage, and a connection to nature, you can create a space that not only supports your productivity but actively fuels your creativity. At Lumière Home, we believe that great design begins with understanding how you live and work. Explore our executive office collection to find pieces that bring your vision to life.</p>
+
+      <div class="article-back">
+        <a href="blog.html#latest" class="btn btn--primary">&larr; Back to Latest Articles</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-mark">L</div>
+          <div class="footer__logo-name">Lumière <span>Home</span></div>
+        </div>
+        <p>Where timeless craftsmanship meets modern luxury. Creating beautiful spaces for discerning homes since 2009.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.65 1.97-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.08.54 1.96 1.6 1.96 1.92 0 3.4-2.02 3.4-4.94 0-2.58-1.86-4.39-4.51-4.39-3.07 0-4.87 2.3-4.87 4.68 0 .93.36 1.92.8 2.46a.32.32 0 0 1 .07.31c-.08.34-.27 1.08-.3 1.23-.05.2-.16.24-.38.15-1.42-.66-2.3-2.74-2.3-4.41 0-3.59 2.61-6.89 7.53-6.89 3.96 0 7.03 2.82 7.03 6.59 0 3.93-2.48 7.09-5.92 7.09-1.16 0-2.25-.6-2.62-1.31l-.71 2.65c-.26.98-.95 2.21-1.42 2.96.5.15 1.03.23 1.57.23 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Houzz">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L3 9v12h6V15h6v6h6V9L15 3z"/><path d="M9 9h6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h5>Collections</h5>
+        <ul class="footer__links">
+          <li><a href="gallery.html#living">Living Room</a></li>
+          <li><a href="gallery.html#bedroom">Bedroom</a></li>
+          <li><a href="gallery.html#dining">Dining Room</a></li>
+          <li><a href="gallery.html#kitchen">Kitchen</a></li>
+          <li><a href="gallery.html#office">Office</a></li>
+          <li><a href="gallery.html#outdoor">Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Stay Inspired</h5>
+        <div class="footer__newsletter">
+          <p style="font-size: var(--fs-sm); color: rgba(234,219,200,0.5); margin-bottom: var(--space-3);">
+            Join 25,000+ design lovers for monthly inspiration.
+          </p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button type="submit" aria-label="Subscribe">&rarr;</button>
+          </form>
+        </div>
+        <div style="margin-top: var(--space-6);">
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="currentColor"/></svg> 14 Kensington High St, London</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +44 20 7946 0000</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> hello@lumierehome.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Lumi&egrave;re Home. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<!-- Toast container -->
+<div class="toast-container" aria-live="polite"></div>
+
+<!-- ══════════════════════════════════════════
+   SCRIPTS
+══════════════════════════════════════════ -->
+<script src="js/utils.js"></script>
+<script src="js/navbar.js"></script>
+
+<script>
+/* ── Theme Toggle ── */
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('lumiere-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', theme);
+  if (toggle) toggle.classList.toggle('dark', theme === 'dark');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.classList.toggle('dark', next === 'dark');
+      localStorage.setItem('lumiere-theme', next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

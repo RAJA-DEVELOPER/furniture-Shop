@@ -611,7 +611,7 @@
   transform: translateY(-4px);
 }
 
-.pillar-icon { font-size: 28px; margin-bottom: var(--space-3); }
+.pillar-icon { font-size: 20px; margin-bottom: var(--space-3); }
 .pillar-title { font-weight: 700; font-size: var(--fs-md); color: var(--olive-dark); margin-bottom: var(--space-2); }
 .pillar-desc { font-size: var(--fs-sm); color: var(--charcoal-soft); }
 
@@ -647,7 +647,7 @@
   transform: translateY(-4px);
 }
 
-.award-badge__icon { font-size: 32px; }
+.award-badge__icon { font-size: 32px; color: var(--text-light); }
 
 .award-badge__year {
   font-size: var(--fs-xs);
@@ -783,7 +783,8 @@
   border-color: var(--bronze);
 }
 
-.warranty-icon { font-size: 40px; margin-bottom: var(--space-4); }
+.warranty-icon { font-size: 22px; margin-bottom: var(--space-4); }
+.warranty-icon svg { display: block; margin: 0 auto; }
 
 .warranty-years {
   font-family: var(--font-serif);

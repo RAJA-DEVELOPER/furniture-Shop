@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lumière Home Privacy Policy — How we collect, use, and protect your personal information." />
-  <title>Privacy Policy — Lumière Home</title>
+  <meta name="description" content="Learn how to zone an open-plan space without walls — using rugs, furniture, lighting, colour, and plants to define each area." />
+  <meta property="og:title" content="Zoning an Open-Plan Space Without Walls — Lumière Home" />
+  <meta property="og:description" content="Open-plan living is popular, but zoning is key. Discover clever techniques to define separate areas while keeping the sense of space intact." />
+  <title>Zoning an Open-Plan Space Without Walls — Lumière Home</title>
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -13,7 +15,21 @@
   <link rel="stylesheet" href="css/premium.css" />
   <link rel="stylesheet" href="css/rtl.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+  <script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+  <style>
+.article-hero { padding: var(--space-12) 0 var(--space-8); }
+.article-hero .section-label { margin-bottom: var(--space-4); }
+.article-hero h1 { font-family: var(--font-serif); font-size: var(--fs-4xl); font-weight: 700; line-height: 1.2; margin-bottom: var(--space-4); }
+.article-meta { display: flex; gap: var(--space-4); align-items: center; font-size: var(--fs-sm); color: var(--charcoal-soft); margin-bottom: var(--space-6); }
+.article-featured-img { width: 100%; border-radius: var(--radius-2xl); margin-bottom: var(--space-10); aspect-ratio: 16/9; object-fit: cover; }
+.article-body { max-width: 720px; margin: 0 auto; }
+.article-body p { font-size: var(--fs-md); line-height: 1.8; color: var(--charcoal); margin-bottom: var(--space-5); }
+.article-body h2 { font-family: var(--font-serif); font-size: var(--fs-2xl); margin-top: var(--space-10); margin-bottom: var(--space-4); color: var(--charcoal); }
+.article-body h3 { font-family: var(--font-serif); font-size: var(--fs-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--charcoal); }
+.article-back { text-align: center; margin-top: var(--space-12); margin-bottom: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--sand); }
+@media (max-width:768px){.article-hero h1{font-size:var(--fs-2xl)}.article-body p{font-size:var(--fs-base)}.article-body h2{font-size:var(--fs-xl)}.article-body h3{font-size:var(--fs-lg)}.article-meta{flex-wrap:wrap;gap:var(--space-2)}}
+@media (max-width:480px){.article-hero{padding:var(--space-8) 0 var(--space-6)}.article-hero h1{font-size:var(--fs-xl)}.article-featured-img{border-radius:var(--radius-lg);margin-bottom:var(--space-6)}.article-body h2{font-size:var(--fs-lg)}}
+  </style>
 </head>
 <body>
 
@@ -23,13 +39,10 @@
 <header class="navbar navbar--opaque" role="banner">
   <div class="container">
     <nav class="navbar__inner" aria-label="Main navigation">
-      <!-- Logo -->
       <a href="index.html" class="navbar__logo" aria-label="Lumière Home">
         <div class="navbar__logo-mark">L</div>
         <span class="navbar__logo-text">Lumière <span>Home</span></span>
       </a>
-
-      <!-- Desktop Menu -->
       <ul class="navbar__menu" role="list">
         <li class="nav-item">
           <a href="index.html" class="nav-link">Home</a>
@@ -47,16 +60,13 @@
           <a href="gallery.html" class="nav-link">Gallery</a>
         </li>
         <li class="nav-item">
-          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
         </li>
         <li class="nav-item">
           <a href="contact.html" class="nav-link">Contact</a>
         </li>
       </ul>
-
-      <!-- Icons -->
       <div class="navbar__icons">
-
         <a href="login.html" class="navbar__icon-btn" aria-label="Account">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
@@ -73,10 +83,8 @@
   </div>
 </header>
 
-<!-- Mobile Menu Overlay -->
 <div class="mobile-menu-overlay" id="menu-overlay"></div>
 
-<!-- Mobile Menu -->
 <nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -102,65 +110,75 @@
 
 <main id="main">
 
-<!-- ══ HERO ══ -->
-<section class="page-hero" aria-labelledby="privacy-hero-title">
-  <div class="page-hero__bg">
-    <img src="images/hero-living-room.png" alt="" class="img-real" />
-  </div>
-  <div class="page-hero__overlay"></div>
-  <div class="container">
-    <div class="page-hero__content reveal">
-      <h1 class="page-hero__title" id="privacy-hero-title">Privacy Policy</h1>
-      <p class="page-hero__subtitle">Last updated: March 2026</p>
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-body">
+        <div class="section-label">Design Tips</div>
+        <h1>Zoning an Open-Plan Space Without Walls</h1>
+        <div class="article-meta">
+          <span>Jun 2, 2026</span>
+          <span>&middot;</span>
+          <span>8 min read</span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ PRIVACY CONTENT ══ -->
-<section class="section" aria-labelledby="privacy-content-title">
   <div class="container">
-    <div class="legal-content">
-
-      <h2>1. Introduction</h2>
-      <p>Lumi&egrave;re Home Ltd ("we," "us," "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website or use our services.</p>
-
-      <h2>2. Information We Collect</h2>
-      <p><strong>Personal Information:</strong> We may collect your name, email address, phone number, billing and shipping address, and payment information when you place an order, create an account, or contact us.</p>
-      <p><strong>Usage Data:</strong> We automatically collect certain information when you visit our website, including your IP address, browser type, operating system, referring URLs, and browsing behaviour.</p>
-
-      <h2>3. How We Use Your Information</h2>
-      <p>We use your information to process orders, communicate with you about your purchases, improve our website and services, send marketing communications (with your consent), and comply with legal obligations.</p>
-
-      <h2>4. Legal Basis for Processing</h2>
-      <p>We process your personal data on the following legal bases: performance of a contract (e.g., fulfilling your order), legitimate interests (e.g., improving our services), and your consent (e.g., marketing emails).</p>
-
-      <h2>5. Data Sharing</h2>
-      <p>We do not sell your personal information. We may share your data with trusted third-party service providers who assist us in operating our website, processing payments, and delivering orders. These providers are contractually bound to protect your data.</p>
-
-      <h2>6. Cookies</h2>
-      <p>Our website uses cookies to enhance your browsing experience, analyse site traffic, and serve personalised content. You can control cookie preferences through your browser settings. For more details, see our <a href="terms.html">Cookie Policy</a>.</p>
-
-      <h2>7. Data Retention</h2>
-      <p>We retain your personal information only as long as necessary to fulfil the purposes outlined in this policy, unless a longer retention period is required by law.</p>
-
-      <h2>8. Your Rights</h2>
-      <p>Under applicable data protection laws, you have the right to access, correct, delete, or port your personal data. You also have the right to object to or restrict certain processing activities. To exercise these rights, please <a href="contact.html">contact us</a>.</p>
-
-      <h2>9. Data Security</h2>
-      <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction.</p>
-
-      <h2>10. Third-Party Links</h2>
-      <p>Our website may contain links to third-party sites. We are not responsible for the privacy practices of these websites. We encourage you to review their privacy policies before providing any personal information.</p>
-
-      <h2>11. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
-
-      <h2>12. Contact Us</h2>
-      <p>If you have any questions or concerns about this Privacy Policy or our data practices, please <a href="contact.html">contact us</a> at privacy@lumierehome.com or write to Lumière Home Ltd, 14 Kensington High Street, London.</p>
-
-    </div>
+    <img src="images/hero-living-room.png" alt="Open-plan living room with distinct zones" class="article-featured-img" loading="lazy" />
   </div>
-</section>
+
+  <section class="article-body">
+    <div class="container">
+      <p>Open-plan living has become the defining layout of modern homes. By removing walls between the kitchen, dining, and living areas, these spaces feel larger, brighter, and more conducive to social interaction. Yet the very quality that makes open-plan living so appealing — its seamless, flowing nature — can also be its greatest challenge. Without careful planning, an open-plan room can feel chaotic, undefined, and lacking in intimacy.</p>
+
+      <p>The solution is zoning: the art of creating distinct functional areas within a single volume without resorting to full-height walls. When done well, zoning preserves the openness and light flow that make these spaces desirable while giving each area a clear sense of purpose and identity. Here are the most effective techniques for zoning an open-plan space.</p>
+
+      <h2>Rug Zoning: Define with Texture and Pattern</h2>
+
+      <p>Rugs are one of the simplest and most effective zoning tools. A well-placed rug instantly anchors a seating group, defines a dining area, or marks out a workspace. The visual boundary created by a rug tells the eye that this area has a distinct function.</p>
+
+      <p>For a living area, choose a large rug that extends beyond the front legs of your sofa and armchairs to create a cohesive island. In the dining zone, the rug should be large enough to accommodate the table and chairs even when pulled out. Vary textures between zones — a plush wool rug for the lounge, a flat-weave sisal for the dining area — to reinforce the separation through tactile contrast.</p>
+
+      <h2>Furniture Arrangement: Sofas and Shelving as Dividers</h2>
+
+      <p>Furniture can do double duty as room dividers. A sofa placed with its back to the dining area creates a natural screen without blocking light. Low-backed sofas and modular sectionals work particularly well because they define the boundary while still allowing visual connection across the room.</p>
+
+      <p>Open shelving units serve as transparent partitions. Filled with books, ceramics, and plants, they provide storage while gently separating zones. Choose units that are open on both sides so light can pass through. For a bolder statement, a floor-to-ceiling bookcase can act as a near-total divide while still feeling airy compared to a solid wall.</p>
+
+      <h2>Lighting Zones: Pendants, Floors, and Accents</h2>
+
+      <p>Lighting is perhaps the most powerful zoning tool in an open-plan space. By creating distinct lighting layers for each area, you can define zones without any physical barrier at all.</p>
+
+      <p>Suspend a pendant light or cluster of pendants over the dining table to create a visual anchor. In the living area, use floor lamps and table lamps at different heights to create a warm, intimate pool of light. Undercabinet lighting in the kitchen zone provides task illumination while subtly marking the transition from cooking to living spaces. Use dimmers throughout so you can adjust the intensity of each zone independently, allowing the room to adapt to different activities throughout the day.</p>
+
+      <h2>Colour Blocking: Paint as a Boundary</h2>
+
+      <p>Colour can define a zone more powerfully than any piece of furniture. By painting different walls or sections of the room in different colours, you create psychological boundaries that the brain interprets as distinct spaces.</p>
+
+      <p>A popular approach is to paint the living area wall in a warm neutral and the dining alcove in a deeper accent colour. Alternatively, use the same colour but in different finishes — matte on one wall, satin on another — to create subtle variation. Consider painting the ceiling in the dining zone a slightly different shade to create a visual "lid" over that area. Half-wall colour blocking, where the lower half of a wall is painted differently from the upper half, can also help delineate zones without breaking the space visually.</p>
+
+      <h2>Level Changes: Split-Level and Platform Designs</h2>
+
+      <p>A change in floor level is one of the most definitive ways to zone a space. Even a small step-up or step-down creates a clear psychological boundary between areas while maintaining visual continuity.</p>
+
+      <p>If you are planning a renovation, consider raising the dining area on a low platform or creating a sunken living room lounge. The change in level signals a shift in activity and atmosphere. For existing spaces, a low platform step can be added without major structural work. Combine level changes with different flooring materials — timber on the upper level, tile on the lower — to reinforce the transition.</p>
+
+      <h2>Greenery: Plants as Natural Dividers</h2>
+
+      <p>Plants bring life, texture, and a soft, organic form of division to open-plan spaces. A row of tall potted plants — fiddle-leaf figs, bird of paradise, or bamboo — creates a living screen that filters light and adds privacy without the permanence of a wall.</p>
+
+      <p>Use plants strategically to mark transitions: a large potted plant at the junction between the living and dining areas, or a cluster of trailing plants on a shelf that runs along the boundary between the kitchen and lounge. Hanging planters can define a zone from above, drawing the eye down to the area below. Beyond their spatial function, plants improve air quality and bring a sense of calm to every zone they touch.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Zoning an open-plan space is about balance — creating enough separation for each area to feel purposeful while preserving the light, flow, and sociability that made you choose an open-plan layout in the first place. The best schemes combine multiple techniques: a rug to anchor the seating, a pendant to define the dining table, a shelf to separate the kitchen, and plants to soften the transitions. At Lumière Home, our collections are designed to help you create harmonious, multi-functional spaces that work beautifully at every scale. Browse our living and dining collections to find pieces that help you define your zones with style.</p>
+
+      <div class="article-back">
+        <a href="blog.html#latest" class="btn btn--primary">&larr; Back to Latest Articles</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
@@ -225,7 +243,7 @@
           </p>
           <form class="newsletter-form" novalidate>
             <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
-            <button type="submit" aria-label="Subscribe">→</button>
+            <button type="submit" aria-label="Subscribe">&rarr;</button>
           </form>
         </div>
         <div style="margin-top: var(--space-6);">
@@ -237,7 +255,7 @@
     </div>
 
     <div class="footer__bottom">
-      <p class="footer__copyright">© 2026 Lumière Home. All rights reserved.</p>
+      <p class="footer__copyright">&copy; 2026 Lumi&egrave;re Home. All rights reserved.</p>
       <div class="footer__legal">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
@@ -247,10 +265,17 @@
   </div>
 </footer>
 
-<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<!-- Toast container -->
 <div class="toast-container" aria-live="polite"></div>
+
 <script src="js/utils.js"></script>
 <script src="js/navbar.js"></script>
+
 <script>
 (function() {
   const toggle = document.getElementById('theme-toggle');

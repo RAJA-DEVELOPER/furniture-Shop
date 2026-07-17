@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lumière Home Privacy Policy — How we collect, use, and protect your personal information." />
-  <title>Privacy Policy — Lumière Home</title>
+  <meta name="description" content="What makes furniture sustainable? A deep dive into FSC certification, low-VOC finishes, ethical sourcing, local manufacturing, and more." />
+  <title>What Makes Furniture Sustainable? A Deep Dive — Lumière Home</title>
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -13,7 +13,21 @@
   <link rel="stylesheet" href="css/premium.css" />
   <link rel="stylesheet" href="css/rtl.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-<script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+  <script>!function(){var e=localStorage.getItem('lumiere-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',e)}()</script>
+  <style>
+    .article-hero { padding: var(--space-12) 0 var(--space-8); }
+    .article-hero .section-label { margin-bottom: var(--space-4); }
+    .article-hero h1 { font-family: var(--font-serif); font-size: var(--fs-4xl); font-weight: 700; line-height: 1.2; margin-bottom: var(--space-4); }
+    .article-meta { display: flex; gap: var(--space-4); align-items: center; font-size: var(--fs-sm); color: var(--charcoal-soft); margin-bottom: var(--space-6); }
+    .article-featured-img { width: 100%; border-radius: var(--radius-2xl); margin-bottom: var(--space-10); aspect-ratio: 16/9; object-fit: cover; }
+    .article-body { max-width: 720px; margin: 0 auto; }
+    .article-body p { font-size: var(--fs-md); line-height: 1.8; color: var(--charcoal); margin-bottom: var(--space-5); }
+    .article-body h2 { font-family: var(--font-serif); font-size: var(--fs-2xl); margin-top: var(--space-10); margin-bottom: var(--space-4); color: var(--charcoal); }
+    .article-body h3 { font-family: var(--font-serif); font-size: var(--fs-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--charcoal); }
+    .article-back { text-align: center; margin-top: var(--space-12); margin-bottom: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--sand); }
+@media (max-width:768px){.article-hero h1{font-size:var(--fs-2xl)}.article-body p{font-size:var(--fs-base)}.article-body h2{font-size:var(--fs-xl)}.article-body h3{font-size:var(--fs-lg)}.article-meta{flex-wrap:wrap;gap:var(--space-2)}}
+@media (max-width:480px){.article-hero{padding:var(--space-8) 0 var(--space-6)}.article-hero h1{font-size:var(--fs-xl)}.article-featured-img{border-radius:var(--radius-lg);margin-bottom:var(--space-6)}.article-body h2{font-size:var(--fs-lg)}}
+  </style>
 </head>
 <body>
 
@@ -23,40 +37,20 @@
 <header class="navbar navbar--opaque" role="banner">
   <div class="container">
     <nav class="navbar__inner" aria-label="Main navigation">
-      <!-- Logo -->
       <a href="index.html" class="navbar__logo" aria-label="Lumière Home">
         <div class="navbar__logo-mark">L</div>
         <span class="navbar__logo-text">Lumière <span>Home</span></span>
       </a>
-
-      <!-- Desktop Menu -->
       <ul class="navbar__menu" role="list">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="home2.html" class="nav-link">Home2</a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="services.html" class="nav-link">Services</a>
-        </li>
-        <li class="nav-item">
-          <a href="gallery.html" class="nav-link">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a href="blog.html" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">Contact</a>
-        </li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">Home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-
-      <!-- Icons -->
       <div class="navbar__icons">
-
         <a href="login.html" class="navbar__icon-btn" aria-label="Account">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
@@ -73,10 +67,8 @@
   </div>
 </header>
 
-<!-- Mobile Menu Overlay -->
 <div class="mobile-menu-overlay" id="menu-overlay"></div>
 
-<!-- Mobile Menu -->
 <nav class="navbar__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -102,65 +94,55 @@
 
 <main id="main">
 
-<!-- ══ HERO ══ -->
-<section class="page-hero" aria-labelledby="privacy-hero-title">
-  <div class="page-hero__bg">
-    <img src="images/hero-living-room.png" alt="" class="img-real" />
-  </div>
-  <div class="page-hero__overlay"></div>
+<!-- ══════════════════════════════════════════
+   ARTICLE HERO
+══════════════════════════════════════════ -->
+<article>
   <div class="container">
-    <div class="page-hero__content reveal">
-      <h1 class="page-hero__title" id="privacy-hero-title">Privacy Policy</h1>
-      <p class="page-hero__subtitle">Last updated: March 2026</p>
+    <div class="article-hero">
+      <div class="section-label">Sustainability</div>
+      <h1>What Makes Furniture Sustainable? A Deep Dive</h1>
+      <div class="article-meta">
+        <span>May 20, 2026</span>
+        <span>·</span>
+        <span>14 min read</span>
+      </div>
+      <img src="images/bedroom-interior.png" alt="Sustainable furniture" class="article-featured-img" loading="lazy" />
+    </div>
+
+    <div class="article-body">
+      <p>Sustainability in furniture has moved far beyond a marketing buzzword. Today it encompasses the full lifecycle of a piece — from the forest where the wood was harvested to the finish that coats its surface, from the wages paid to the craftspeople who built it to what happens when the piece finally reaches the end of its useful life. Understanding what genuinely makes a piece of furniture sustainable requires peeling back several layers. This guide walks through each one.</p>
+
+      <h2>FSC Certification: What It Means and Why It Matters</h2>
+      <p>The Forest Stewardship Council (FSC) logo on a piece of furniture is one of the most reliable indicators of responsible forestry. FSC certification ensures that the wood was harvested in a way that preserves biodiversity, protects water quality, and maintains the forest's ecological function for future generations. It also mandates fair treatment and safety for forestry workers. When you see the FSC label, you can be confident that no old-growth forests were cleared and that the timber was legally sourced. Look for the specific FSC 100% or FSC Mix labels — FSC Recycled is also excellent but applies to reclaimed wood content.</p>
+
+      <h2>Low-VOC Finishes: Health and Environmental Benefits</h2>
+      <p>Volatile organic compounds (VOCs) are chemicals that evaporate into the air at room temperature. Conventional varnishes, stains, and paints release VOCs for months or even years after application, contributing to indoor air pollution and a range of health issues from headaches to respiratory problems. Low-VOC and zero-VOC finishes — typically water-based or natural oil-based — dramatically reduce this off-gassing. They are better for the planet and better for your home. Look for furniture finished with hard wax oil, shellac, or plant-based oils like tung or linseed. These materials also tend to be more repairable than synthetic coatings.</p>
+
+      <h2>Ethical Sourcing and Supply Chain Transparency</h2>
+      <p>Sustainable furniture is not only about materials — it is also about people. Ethical sourcing means that every link in the supply chain, from the mill to the workshop, operates under fair labour practices. This includes safe working conditions, living wages, and the absence of child or forced labour. Brands that are transparent about their supply chains publish their supplier lists, and many now use blockchain-based traceability tools to allow customers to see the origin of every component. When a company cannot or will not answer questions about where and how its furniture is made, that is a red flag.</p>
+
+      <h2>Local Manufacturing and Reducing Carbon Footprint</h2>
+      <p>Furniture manufactured close to its point of sale carries a significantly lower carbon footprint than imported alternatives. Shipping a single container of furniture across the ocean produces roughly one ton of CO₂ per 1,000 nautical miles. Local manufacturing also supports regional economies, reduces lead times, and makes it easier to visit the factory or workshop. When shopping, consider not just the materials of a piece but the distance it has travelled to reach you. Many artisan brands now highlight "made within X miles" as a sustainability metric.</p>
+
+      <h2>Durability and Reparability: Buy Once, Keep Forever</h2>
+      <p>The most sustainable piece of furniture is the one that never needs replacing. Durability starts with construction: mortise-and-tenon joinery, dovetailed drawers, and kiln-dried hardwoods are hallmarks of furniture built to last multiple generations. Reparability is equally important. Can the finish be re-oiled? Can a broken leg be replaced rather than discarded? Pieces designed for disassembly — where screws replace glue and cam locks replace nails — can be repaired, moved, and eventually recycled more easily. This philosophy, sometimes called "design for longevity," is the antithesis of fast furniture.</p>
+
+      <h2>End of Life: Biodegradable Materials and Recycling Programs</h2>
+      <p>What happens to a piece of furniture when its owner no longer wants it? Sustainable furniture is designed with its end of life in mind. Natural materials like solid wood, cotton, wool, and jute biodegrade without releasing toxins. Metal components can be separated and infinitely recycled. Some manufacturers now operate take-back programs, accepting old pieces to refurbish, resell, or break down into raw materials. Avoid furniture made from mixed materials that cannot be separated — for example, particleboard with plastic laminate — as these nearly always end up in landfills.</p>
+
+      <h2>Certifications to Look For</h2>
+      <p>Several third-party certifications help cut through greenwashing. <strong>FSC</strong> ensures responsible forestry. <strong>GREENGUARD Gold</strong> certifies that a product meets strict chemical emissions limits and is safe for use in schools and healthcare settings. <strong>Cradle to Cradle</strong> assesses material health, material reutilisation, renewable energy, water stewardship, and social fairness across the full product lifecycle. <strong>B Corp</strong> certification, while broader than furniture alone, indicates that a company meets high standards of social and environmental performance. When you see multiple certifications on a single piece, it is a strong signal that the brand is genuinely committed to sustainability rather than simply checking one box.</p>
+
+      <h2>Making Informed Choices</h2>
+      <p>Sustainable furniture is not a single attribute — it is a constellation of them. A truly sustainable piece uses certified responsibly sourced materials, is finished with low-toxicity coatings, is manufactured under fair labour conditions, is built to last, and can be responsibly disposed of or recycled at the end of its life. No piece is perfect, and trade-offs exist (a locally made piece might use a less durable finish; a highly durable piece might use a synthetic fabric). The goal is not perfection but progress. By asking the right questions — about materials, labour, distance, and end of life — you can furnish your home in a way that aligns with your values and reduces your environmental footprint.</p>
+    </div>
+
+    <div class="article-back">
+      <a href="blog.html#latest" class="btn btn--ghost">← Back to Blog</a>
     </div>
   </div>
-</section>
-
-<!-- ══ PRIVACY CONTENT ══ -->
-<section class="section" aria-labelledby="privacy-content-title">
-  <div class="container">
-    <div class="legal-content">
-
-      <h2>1. Introduction</h2>
-      <p>Lumi&egrave;re Home Ltd ("we," "us," "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website or use our services.</p>
-
-      <h2>2. Information We Collect</h2>
-      <p><strong>Personal Information:</strong> We may collect your name, email address, phone number, billing and shipping address, and payment information when you place an order, create an account, or contact us.</p>
-      <p><strong>Usage Data:</strong> We automatically collect certain information when you visit our website, including your IP address, browser type, operating system, referring URLs, and browsing behaviour.</p>
-
-      <h2>3. How We Use Your Information</h2>
-      <p>We use your information to process orders, communicate with you about your purchases, improve our website and services, send marketing communications (with your consent), and comply with legal obligations.</p>
-
-      <h2>4. Legal Basis for Processing</h2>
-      <p>We process your personal data on the following legal bases: performance of a contract (e.g., fulfilling your order), legitimate interests (e.g., improving our services), and your consent (e.g., marketing emails).</p>
-
-      <h2>5. Data Sharing</h2>
-      <p>We do not sell your personal information. We may share your data with trusted third-party service providers who assist us in operating our website, processing payments, and delivering orders. These providers are contractually bound to protect your data.</p>
-
-      <h2>6. Cookies</h2>
-      <p>Our website uses cookies to enhance your browsing experience, analyse site traffic, and serve personalised content. You can control cookie preferences through your browser settings. For more details, see our <a href="terms.html">Cookie Policy</a>.</p>
-
-      <h2>7. Data Retention</h2>
-      <p>We retain your personal information only as long as necessary to fulfil the purposes outlined in this policy, unless a longer retention period is required by law.</p>
-
-      <h2>8. Your Rights</h2>
-      <p>Under applicable data protection laws, you have the right to access, correct, delete, or port your personal data. You also have the right to object to or restrict certain processing activities. To exercise these rights, please <a href="contact.html">contact us</a>.</p>
-
-      <h2>9. Data Security</h2>
-      <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction.</p>
-
-      <h2>10. Third-Party Links</h2>
-      <p>Our website may contain links to third-party sites. We are not responsible for the privacy practices of these websites. We encourage you to review their privacy policies before providing any personal information.</p>
-
-      <h2>11. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
-
-      <h2>12. Contact Us</h2>
-      <p>If you have any questions or concerns about this Privacy Policy or our data practices, please <a href="contact.html">contact us</a> at privacy@lumierehome.com or write to Lumière Home Ltd, 14 Kensington High Street, London.</p>
-
-    </div>
-  </div>
-</section>
+</article>
 
 </main>
 
@@ -247,8 +229,17 @@
   </div>
 </footer>
 
-<button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<!-- Toast container -->
 <div class="toast-container" aria-live="polite"></div>
+
+<!-- ══════════════════════════════════════════
+   SCRIPTS
+══════════════════════════════════════════ -->
 <script src="js/utils.js"></script>
 <script src="js/navbar.js"></script>
 <script>

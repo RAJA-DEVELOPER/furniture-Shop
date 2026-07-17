@@ -791,6 +791,9 @@ table {
 
 /* ── Ultra-small screens (< 400px) ── */
 @media (max-width: 399px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-item { border-right: none !important; border-bottom: none !important; padding: var(--space-6) var(--space-4); }
+  .stat-item__num { font-size: var(--fs-3xl); }
   .navbar__icon-btn {
     width: 28px;
     height: 28px;

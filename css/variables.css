@@ -118,6 +118,13 @@
   --text-light: #FAF8F5;
 }
 
+/* ── Adaptive text for var(--charcoal) sections ── */
+:root {
+  --text-on-charcoal-muted:  rgba(250, 248, 245, 0.75);
+  --text-on-charcoal-subtle: rgba(250, 248, 245, 0.65);
+  --accent-on-charcoal:      #C9A97A;
+}
+
 /* ── Dark mode via system preference ── */
 @media (prefers-color-scheme: dark) {
   :root { --theme: dark; }
@@ -149,6 +156,9 @@
   --shadow-bronze: 0 4px 24px rgba(176,141,87,0.15);
   --shadow-card: 0 2px 16px rgba(0,0,0,0.5);
   --shadow-hover: 0 8px 40px rgba(0,0,0,0.7);
+  --text-on-charcoal-muted:  rgba(18, 16, 14, 0.75);
+  --text-on-charcoal-subtle: rgba(18, 16, 14, 0.65);
+  --accent-on-charcoal:      #5C4033;
 }
 
 /* ── Dark theme (system preference fallback) ── */
@@ -178,5 +188,8 @@
     --shadow-bronze: 0 4px 24px rgba(176,141,87,0.15);
     --shadow-card: 0 2px 16px rgba(0,0,0,0.5);
     --shadow-hover: 0 8px 40px rgba(0,0,0,0.7);
+    --text-on-charcoal-muted:  rgba(18, 16, 14, 0.75);
+    --text-on-charcoal-subtle: rgba(18, 16, 14, 0.65);
+    --accent-on-charcoal:      #5C4033;
   }
 }
