@@ -129,9 +129,6 @@
   .offers-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .offers-grid > .offer-card:first-child {
-    grid-column: span 2;
-  }
   .offer-card__discount {
     font-size: var(--fs-4xl);
   }
@@ -146,6 +143,16 @@
   }
   .project-card__info {
     padding: var(--space-4);
+  }
+  .navbar__inner {
+    gap: var(--space-4);
+  }
+  .navbar__icons {
+    gap: var(--space-1);
+  }
+  .navbar__cta {
+    font-size: 12px;
+    padding: var(--space-1) var(--space-3);
   }
   .page-hero {
     min-height: 380px;
@@ -259,9 +266,6 @@
   .offers-grid {
     grid-template-columns: 1fr;
   }
-  .offers-grid > .offer-card:first-child {
-    grid-column: span 1;
-  }
   .features-grid-why {
     grid-template-columns: 1fr;
   }
@@ -318,6 +322,10 @@
   .navbar__icon-btn {
     width: 36px;
     height: 36px;
+  }
+  .navbar__cta {
+    font-size: 12px;
+    padding: var(--space-1) var(--space-3);
   }
   .navbar__hamburger {
     width: 36px;
@@ -681,6 +689,10 @@
     width: 32px;
     height: 32px;
   }
+  .navbar__cta {
+    font-size: 11px;
+    padding: var(--space-1) var(--space-2-5);
+  }
   .navbar__hamburger {
     width: 32px;
     height: 32px;
@@ -700,7 +712,6 @@
   .navbar__logo-mark {
     width: 32px;
     height: 32px;
-    font-size: var(--fs-base);
   }
   .rtl-toggle {
     font-size: 10px;
@@ -798,6 +809,10 @@ table {
     width: 28px;
     height: 28px;
   }
+  .navbar__cta {
+    font-size: 10px;
+    padding: 2px var(--space-2);
+  }
   .navbar__hamburger {
     width: 28px;
     height: 28px;
@@ -818,6 +833,5 @@ table {
   .navbar__logo-mark {
     width: 28px;
     height: 28px;
-    font-size: var(--fs-sm);
   }
 }

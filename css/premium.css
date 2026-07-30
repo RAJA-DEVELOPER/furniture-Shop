@@ -260,7 +260,7 @@
   align-items: center;
   gap: 8px;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--bronze);
@@ -293,7 +293,7 @@
 .section-title {
   font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--charcoal);
@@ -666,11 +666,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: var(--fs-xl);
-  font-weight: 800;
-  color: white;
   box-shadow: var(--shadow-bronze);
+}
+
+.footer__logo-mark svg {
+  width: 24px;
+  height: 24px;
+  color: white;
 }
 
 .footer__logo-name {

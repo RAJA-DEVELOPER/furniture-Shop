@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lumière Home Gallery — Browse our living room, bedroom, dining, kitchen, office, and outdoor furniture photography. Filter by room and open in full lightbox." />
   <title>Gallery — Lumière Home</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -97,25 +98,106 @@
     .span-2 { grid-column: span 2; }
     .span-2-row { grid-row: span 2; }
 
-    /* Customer homes masonry */
-    .customer-masonry {
-      columns: 4;
-      column-gap: var(--space-4);
+    /* Customer homes testimonial cards */
+    .customer-testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5);
     }
 
-    .customer-photo {
-      break-inside: avoid;
-      margin-bottom: var(--space-4);
+    .customer-card {
       border-radius: var(--radius-xl);
       overflow: hidden;
-      position: relative;
-      cursor: pointer;
+      background: var(--pure-white);
+      border: 1px solid var(--sand);
       transition: all var(--transition-base);
+      cursor: pointer;
     }
 
-    .customer-photo:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .customer-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--bronze);
+    }
 
-    /* Filter sticky bar */
+    .customer-card__visual {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .customer-card__visual img {
+      transition: transform var(--transition-slow);
+    }
+
+    .customer-card:hover .customer-card__visual img {
+      transform: scale(1.08);
+    }
+
+    .customer-card__badge {
+      position: absolute;
+      bottom: var(--space-3);
+      left: var(--space-3);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      background: var(--pure-white);
+      color: var(--walnut-dark);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .customer-card__body {
+      padding: var(--space-4) var(--space-5) var(--space-5);
+    }
+
+    .customer-card__top {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-3);
+    }
+
+    .customer-card__handle {
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      color: var(--bronze);
+      letter-spacing: 0.02em;
+    }
+
+    .customer-card__location {
+      font-size: 11px;
+      color: var(--charcoal-soft);
+    }
+
+    .customer-card__stars {
+      display: flex;
+      gap: 1px;
+      margin-left: auto;
+      color: var(--bronze);
+    }
+
+    .customer-card__quote {
+      font-size: var(--fs-sm);
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    @media (max-width: 992px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid--4 { grid-template-columns: repeat(2, 1fr); }
+      .span-2 { grid-column: span 1; }
+      .customer-testimonials { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid,
+      .gallery-grid--4 { grid-template-columns: 1fr; }
+      .customer-testimonials { grid-template-columns: 1fr; }
+    }
     .filter-bar {
       position: sticky;
       top: calc(var(--nav-height) - 12px);
@@ -182,7 +264,7 @@
     <nav class="navbar__inner" aria-label="Main navigation">
       <!-- Logo -->
       <a href="index.html" class="navbar__logo" aria-label="Lumière Home">
-        <div class="navbar__logo-mark">L</div>
+        <div class="navbar__logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <span class="navbar__logo-text">Lumière <span>Home</span></span>
       </a>
 
@@ -214,9 +296,7 @@
       <!-- Icons -->
       <div class="navbar__icons">
 
-        <a href="login.html" class="navbar__icon-btn" aria-label="Account">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </a>
+        <a href="contact.html" class="btn btn--bronze navbar__cta">Book Now</a>
         <button class="navbar__icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -239,7 +319,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
   <div class="navbar__logo" style="margin-bottom: 2rem;">
-    <div class="navbar__logo-mark">L</div>
+    <div class="navbar__logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
     <span class="navbar__logo-text" style="color: var(--charcoal);">Lumière <span>Home</span></span>
   </div>
   <ul class="mobile-nav-links">
@@ -262,7 +342,7 @@
 <!-- ══ HERO ══ -->
 <section class="page-hero" aria-labelledby="gallery-hero-title">
   <div class="page-hero__bg">
-    <img src="images/home-office.png" alt="Beautiful Interior Spaces" class="img-real" />
+    <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=900&auto=format&fit=crop&q=85" alt="Beautiful Interior Spaces" class="img-real" />
   </div>
   <div class="page-hero__overlay"></div>
   <div class="container">
@@ -299,26 +379,26 @@
 
     <div class="gallery-grid">
       <div class="gallery-cell span-2 reveal delay-1" data-category="living" data-lightbox data-caption="Milano Velvet Sofa — 3-seater in Midnight Blue" style="height: 380px;">
-        <img src="images/hero-living-room.png" alt="Milano Velvet Sofa" class="img-real" style="height:380px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=900&auto=format&fit=crop&q=85" alt="Milano Velvet Sofa" class="img-real" style="height:380px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label">
           <div class="gallery-cell__tag">Living Room</div>
           <div class="gallery-cell__name">Milano Velvet Sofa</div>
         </div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="living" data-lightbox data-caption="Walnut Armchair — Cognac leather" style="height: 380px;">
-        <img src="images/product-armchair.png" alt="Walnut Armchair" class="img-real" style="height:380px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=900&auto=format&fit=crop&q=85" alt="Walnut Armchair" class="img-real" style="height:380px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">Walnut Armchair</div></div>
       </div>
       <div class="gallery-cell reveal delay-1" data-category="living" data-lightbox data-caption="Bronze Coffee Table — Marble top" style="height: 260px;">
-        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">Bronze Coffee Table</div></div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="living" data-lightbox data-caption="Bookshelving Unit — White Oak" style="height: 260px;">
-        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">White Oak Shelving</div></div>
       </div>
       <div class="gallery-cell reveal delay-3" data-category="living" data-lightbox data-caption="Media Console — Dark Walnut" style="height: 260px;">
-        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Living Room</div><div class="gallery-cell__name">Media Console</div></div>
       </div>
     </div>
@@ -334,23 +414,23 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-cell reveal delay-1" data-category="bedroom" data-lightbox data-caption="Osaka Platform Bed — White Oak, King" style="height: 320px;">
-        <img src="images/bedroom-interior.png" alt="Osaka Platform Bed" class="img-real" style="height:320px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=900&auto=format&fit=crop&q=85" alt="Osaka Platform Bed" class="img-real" style="height:320px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Osaka Platform Bed</div></div>
       </div>
       <div class="gallery-cell span-2 reveal delay-2" data-category="bedroom" data-lightbox data-caption="Kyoto Suite — Full bedroom in warm tones" style="height: 320px;">
-        <img src="images/dining-room.png" alt="Kyoto Suite bedroom" class="img-real" style="height:320px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=900&auto=format&fit=crop&q=85" alt="Kyoto Suite bedroom" class="img-real" style="height:320px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Kyoto Suite</div></div>
       </div>
       <div class="gallery-cell reveal delay-1" data-category="bedroom" data-lightbox data-caption="Nordic Wardrobe — Sliding doors" style="height: 260px;">
-        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1558882224-dda166733046?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Nordic Wardrobe</div></div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="bedroom" data-lightbox data-caption="Dressing Table — Brass mirror frame" style="height: 260px;">
-        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Dressing Table</div></div>
       </div>
       <div class="gallery-cell reveal delay-3" data-category="bedroom" data-lightbox data-caption="Sage Bedside Tables — White Oak" style="height: 260px;">
-        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Bedroom</div><div class="gallery-cell__name">Sage Bedside Tables</div></div>
       </div>
     </div>
@@ -366,15 +446,15 @@
     </div>
     <div class="gallery-grid--4 gallery-grid reveal">
       <div class="gallery-cell span-2 reveal delay-1" data-category="dining" data-lightbox data-caption="Florence Dining Table — Solid Walnut 8-seater" style="height: 300px;">
-        <img src="images/dining-room.png" alt="Florence Dining Table" class="img-real" style="height:300px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=900&auto=format&fit=crop&q=85" alt="Florence Dining Table" class="img-real" style="height:300px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Dining</div><div class="gallery-cell__name">Florence Dining Table</div></div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="dining" data-lightbox data-caption="Scandinavian Dining Chairs" style="height: 300px;">
-        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Dining</div><div class="gallery-cell__name">Scandinavian Chairs</div></div>
       </div>
       <div class="gallery-cell reveal delay-3" data-category="dining" data-lightbox data-caption="Sideboard — Dark Walnut with brass handles" style="height: 300px;">
-        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1519643381401-22c77e60520e?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Dining</div><div class="gallery-cell__name">Walnut Sideboard</div></div>
       </div>
     </div>
@@ -390,15 +470,15 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-cell reveal delay-1" data-category="kitchen" data-lightbox data-caption="Kitchen Island — Marble top, Shaker cabinets" style="height: 280px;">
-        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Kitchen</div><div class="gallery-cell__name">Marble Island</div></div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="kitchen" data-lightbox data-caption="Breakfast Stools — Oak & leather" style="height: 280px;">
-        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Kitchen</div><div class="gallery-cell__name">Breakfast Stools</div></div>
       </div>
       <div class="gallery-cell reveal delay-3" data-category="kitchen" data-lightbox data-caption="Pantry Cabinet — Sage green" style="height: 280px;">
-        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Kitchen</div><div class="gallery-cell__name">Pantry Cabinet</div></div>
       </div>
     </div>
@@ -414,15 +494,15 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-cell reveal delay-1" data-category="office" data-lightbox data-caption="Brentwood Executive Desk — Dark Walnut 180cm" style="height: 280px;">
-        <img src="images/home-office.png" alt="Executive Desk" class="img-real" style="height:280px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&auto=format&fit=crop&q=85" alt="Executive Desk" class="img-real" style="height:280px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Office</div><div class="gallery-cell__name">Executive Desk</div></div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="office" data-lightbox data-caption="Hudson Lounge Chair — Full-grain leather" style="height: 280px;">
-        <img src="images/product-armchair.png" alt="Hudson Lounge Chair" class="img-real" style="height:280px;object-fit:cover;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=900&auto=format&fit=crop&q=85" alt="Hudson Lounge Chair" class="img-real" style="height:280px;object-fit:cover;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Office</div><div class="gallery-cell__name">Hudson Lounge Chair</div></div>
       </div>
       <div class="gallery-cell reveal delay-3" data-category="office" data-lightbox data-caption="Modular Bookcase — White Oak, floor-to-ceiling" style="height: 280px;">
-        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Office</div><div class="gallery-cell__name">Modular Bookcase</div></div>
       </div>
     </div>
@@ -440,19 +520,19 @@
 
     <div class="gallery-grid--4 gallery-grid" style="margin-top: var(--space-10);" data-category="decor">
       <div class="gallery-cell reveal delay-1" data-category="decor" data-lightbox data-caption="Brass Vase Collection" style="height: 240px;">
-        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Brass Vase</div></div>
       </div>
       <div class="gallery-cell reveal delay-2" data-category="decor" data-lightbox data-caption="Statement Mirror — Arch frame" style="height: 240px;">
-        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Arch Mirror</div></div>
       </div>
       <div class="gallery-cell reveal delay-3" data-category="decor" data-lightbox data-caption="Linen Throw Cushions" style="height: 240px;">
-        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Linen Cushions</div></div>
       </div>
       <div class="gallery-cell reveal delay-4" data-category="decor" data-lightbox data-caption="Pendant Lighting — Rattan shade" style="height: 240px;">
-        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=85" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
         <div class="gallery-cell__label"><div class="gallery-cell__tag">Décor</div><div class="gallery-cell__name">Rattan Pendant</div></div>
       </div>
     </div>
@@ -468,61 +548,133 @@
       <p class="section-subtitle">Tag us @lumierehome and your space might be featured here — a growing community of beautiful homes.</p>
     </div>
 
-    <div class="customer-masonry" style="margin-top: var(--space-10);">
-      <div class="customer-photo reveal delay-1" data-lightbox data-caption="@sophia_m — London Home">
-        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@sophia_m</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">London, UK</div>
+    <div class="customer-testimonials" style="margin-top: var(--space-10);">
+      <div class="customer-card reveal delay-1" data-category="living">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=900&auto=format&fit=crop&q=85" alt="Milano Velvet Sofa in London home" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Milano Velvet Sofa</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@sophia_m</div>
+            <div class="customer-card__location">London, UK</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"The Milano sofa transformed our living room. The midnight blue velvet is even more stunning in person — and the quality after eight months is just flawless."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-2" data-lightbox data-caption="@j_whitfield — New York Loft">
-        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@j_whitfield</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">New York, USA</div>
+      <div class="customer-card reveal delay-2" data-category="bedroom">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&auto=format&fit=crop&q=85" alt="Osaka Platform Bed in New York loft" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Osaka Platform Bed</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@j_whitfield</div>
+            <div class="customer-card__location">New York, USA</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"Worth every penny. The Oak platform bed is the centrepiece of our loft. Solid joinery, beautiful grain, and it doesn't creak at all — rare for a bed frame."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-1" data-lightbox data-caption="@elena_v — Dubai Villa">
-        <img src="images/hero-living-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@elena_v</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Dubai, UAE</div>
+      <div class="customer-card reveal delay-1" data-category="dining">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900&auto=format&fit=crop&q=85" alt="Florence Dining Table in Dubai villa" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Florence Dining Table</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@elena_v</div>
+            <div class="customer-card__location">Dubai, UAE</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"Our Florence table seats ten comfortably and the walnut top is a work of art. Every dinner guest comments on it. The hand-finish is impossible to replicate with machines."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-3" data-lightbox data-caption="@amara_o — Sydney Home">
-        <img src="images/bedroom-interior.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@amara_o</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Sydney, Australia</div>
+      <div class="customer-card reveal delay-3" data-category="living">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=900&auto=format&fit=crop&q=85" alt="Walnut Armchair in Sydney home" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Walnut Armchair</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@amara_o</div>
+            <div class="customer-card__location">Sydney, Australia</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"I bought the Walnut Armchair for my reading nook and it's the most comfortable chair I've ever owned. The cognac leather has developed a gorgeous patina over six months."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-2" data-lightbox data-caption="@marco_r — Milan Apartment">
-        <img src="images/dining-room.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@marco_r</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Milan, Italy</div>
+      <div class="customer-card reveal delay-2" data-category="living">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=900&auto=format&fit=crop&q=85" alt="White Oak Shelving in Milan apartment" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">White Oak Shelving</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@marco_r</div>
+            <div class="customer-card__location">Milan, Italy</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"The modular shelving system transformed our small Milan apartment. It's functional, beautiful, and the oak grain is stunning. Finally, storage that's also a design statement."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-4" data-lightbox data-caption="@yuki_t — Tokyo Residence">
-        <img src="images/product-armchair.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@yuki_t</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Tokyo, Japan</div>
+      <div class="customer-card reveal delay-4" data-category="bedroom">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1578898887932-dce23a595ad4?w=900&auto=format&fit=crop&q=85" alt="White Oak Shelving in Tokyo residence" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Kyoto Suite</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@yuki_t</div>
+            <div class="customer-card__location">Tokyo, Japan</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"The Kyoto bedroom suite brings a sense of calm to our Tokyo home. The warm wood tones and minimal design fit perfectly with our aesthetic. International delivery was seamless."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-1" data-lightbox data-caption="@michael_c — Singapore Penthouse">
-        <img src="images/home-office.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@michael_c</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Singapore</div>
+      <div class="customer-card reveal delay-1" data-category="office">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=900&auto=format&fit=crop&q=85" alt="Executive Desk in Singapore penthouse" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Executive Desk</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@michael_c</div>
+            <div class="customer-card__location">Singapore</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"The Brentwood Executive Desk is the centrepiece of my home office. The dark walnut finish, the brass details, the hidden cable management — it's both beautiful and functional."</p>
         </div>
       </div>
-      <div class="customer-photo reveal delay-3" data-lightbox data-caption="@amelia_t — Melbourne Home">
-        <img src="images/product-sofa.png" alt="Luxury Furniture" class="img-real" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" />
-        <div style="padding: var(--space-3) var(--space-4); background: var(--pure-white);">
-          <div style="font-size: var(--fs-xs); color: var(--bronze); font-weight: 700;">@amelia_t</div>
-          <div style="font-size: var(--fs-sm); color: var(--charcoal);">Melbourne, AU</div>
+      <div class="customer-card reveal delay-3" data-category="living">
+        <div class="customer-card__visual">
+          <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=900&auto=format&fit=crop&q=85" alt="Hudson Lounge Chair in Melbourne home" class="img-real" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+          <div class="customer-card__badge">Hudson Lounge Chair</div>
+        </div>
+        <div class="customer-card__body">
+          <div class="customer-card__top">
+            <div class="customer-card__handle">@amelia_t</div>
+            <div class="customer-card__location">Melbourne, AU</div>
+            <div class="customer-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="customer-card__quote">"I'm an interior designer, and I recommend Lumière to all my clients. The Hudson chair arrived impeccably packed, the leather is sublime, and the joinery is perfect. Flawless."</p>
         </div>
       </div>
     </div>
@@ -557,7 +709,7 @@
     <div class="footer__top">
       <div class="footer__brand">
         <div class="footer__logo">
-          <div class="footer__logo-mark">L</div>
+          <div class="footer__logo-mark"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2 3 9l13 7 13-7L16 2z"/><path d="M3 22l13 7 13-7"/><path d="M3 16l13 7 13-7"/></svg></div>
           <div class="footer__logo-name">Lumière <span>Home</span></div>
         </div>
         <p>Where timeless craftsmanship meets modern luxury. Creating beautiful spaces for discerning homes since 2009.</p>
@@ -614,9 +766,9 @@
           </form>
         </div>
         <div style="margin-top: var(--space-6);">
-          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="currentColor"/></svg> 14 Kensington High St, London</p>
-          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +44 20 7946 0000</p>
-          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:100%;height:100%;display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> hello@lumierehome.com</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="currentColor"/></svg> 14 Kensington High St, London</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4); margin-bottom: var(--space-2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +44 20 7946 0000</p>
+          <p style="font-size: var(--fs-xs); color: rgba(234,219,200,0.4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;width:14px;height:14px;vertical-align:middle;margin-right:4px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> hello@lumierehome.com</p>
         </div>
       </div>
     </div>
@@ -661,7 +813,7 @@ filterBtns.forEach(btn => {
     btn.classList.add('active');
     const filter = btn.dataset.filter;
 
-    document.querySelectorAll('.gallery-cell, .customer-photo').forEach(cell => {
+    document.querySelectorAll('.gallery-cell, .customer-card').forEach(cell => {
       const cat = cell.dataset.category;
       if (!cat) return;
       const show = filter === 'all' || cat === filter;
